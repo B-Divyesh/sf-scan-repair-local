@@ -41,18 +41,30 @@ Observed on 2026-08-28 UTC:
 - Production dependency audit: 0 vulnerabilities.
 - Production build: passed and emitted `dist/site`; initial app JS is 9.57 KB gzip and CSS is 3.49 KB gzip.
 - Locked Rust/Tauri tests: passed for library, binary, and doc-test targets after installing the workflow's GTK/WebKit prerequisites.
-- Linux consumer install: the public script selected the latest AppImage, verified `db649362a18e881753769ea314363dc9ff2c521b6cb3b1c55709288b4e52db20`, and installed a valid x86-64 ELF into an isolated directory.
+- Linux consumer install: the public script selected the latest AppImage, verified `ae6e0858bc0e05867171e66cb6c311772e3b2398baae55f3e13ef1b5a29a27c0`, and installed a valid x86-64 ELF into an isolated directory.
 - Mobile Lighthouse on `/`: Performance 96, Accessibility 100, Best Practices 100, SEO 100, CLS 0, TBT 19 ms. The throttled local LCP sample was 2.8 s.
 
 ## Release and deployment verification
 
-Release target: `v0.1.6`. The release workflow is required to pass its post-publish source identity and three-platform checksum download gate. After it publishes, rerun:
+Release `v0.1.6` is published at <https://github.com/B-Divyesh/sf-scan-repair-local/releases/tag/v0.1.6>. Tag and `latest.json` both resolve to exact source `a53d2889c8878f874f5b63a23461ab116763aef2`. GitHub Actions run `33208648244` passed macOS arm64, macOS x64, Windows x64, Linux x64, release publication, and the post-publish identity/download gate.
+
+The public release contains DMG arm64/x64, EXE, MSI, AppImage, deb, `SHA256SUMS`, and `latest.json`. Independent rerun:
 
 ```sh
-node scripts/verify-release.mjs --repo=B-Divyesh/sf-scan-repair-local --tag=v0.1.6 --sha="$(git rev-parse v0.1.6^{})"
+node scripts/verify-release.mjs --repo=B-Divyesh/sf-scan-repair-local --tag=v0.1.6 --sha=a53d2889c8878f874f5b63a23461ab116763aef2
 ```
 
-The final handoff update records the release URL, exact source SHA, workflow run, asset hashes, live deployment identity, and any remaining operator action.
+It passed after downloading all three manifest-selected assets. Their published and measured hashes are:
+
+- macOS arm64 DMG: `d98ea4d1d626a989ae087ec2a58b5c3639edfc9ec14ad36160866fc96ceec662`
+- Windows x64 EXE: `7953688f53f72a920f004bb17cae387fccec04ee3519dac48744222048a344cd`
+- Linux x64 AppImage: `ae6e0858bc0e05867171e66cb6c311772e3b2398baae55f3e13ef1b5a29a27c0`
+
+Azure Static Web Apps production deployment completed for resource `sf-scan-repair-local`. Live and local SHA-256 values match for `/` (`6ce87173f9b08aa45e5832bdf55d2031544ba369a0ffc76b877696752295cf20`), `/demo` (`904d05db03f3aa98593a984851ebbc1f18237e3963ac91727e7bf1db5cb020f8`), `sw.js` (`ac16cb83d400e44fa68e6ee5a7c3da344d818fb08d030223405e5125070ec323`), and `install.sh` (`f5d76e22a75e49f562385feae5ce48bc792744b88aeaaafc570c079a749c785d`).
+
+Fresh live browser evidence at desktop and 390 px found no console errors, no horizontal overflow, zero serious/critical axe violations, working skip-link and demo keyboard activation, and a real `v0.1.6` Linux AppImage link before interaction. The demo made no third-party request, completed local OCR in 1,987 ms, and reloaded offline from `scan-repair-local-v10`. Live routes returned 200 for `/`, `/demo`, `/privacy`, `/terms`, install scripts, robots, and sitemap; an unknown route returned the designed 404. Mobile Lighthouse scored Performance 100, Accessibility 100, Best Practices 100, and SEO 100 on retry, with LCP 0.95 s, CLS 0, and TBT 5.5 ms.
+
+No functional gap remains from verification 7. The post-release handoff commit changes documentation only; `git diff v0.1.6..HEAD` confirms no shipped source difference.
 
 ## Signing
 
