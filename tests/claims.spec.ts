@@ -15,7 +15,7 @@ test('@claim:in-memory-original keeps the page out of persistent storage and Und
   expect(await page.evaluate(() => Object.keys(localStorage).filter(key => /page|document|ocr/i.test(key)))).toEqual([])
   await page.getByRole('button', { name: 'Turn right' }).click()
   await page.getByRole('button', { name: 'Apply reversible repair' }).click()
-  expect(await image.getAttribute('src')).not.toBe(original)
+  await expect(image).not.toHaveAttribute('src', original!)
   await page.getByRole('button', { name: 'Undo last repair' }).click()
   await expect(image).toHaveAttribute('src', original!)
 })
@@ -39,7 +39,7 @@ test('@claim:reversible-repair applies rotation to pixels and undo restores the 
   await page.getByRole('button', { name: 'Turn right' }).click()
   await page.getByRole('button', { name: 'Apply reversible repair' }).click()
   await expect(page.getByRole('button', { name: 'Undo last repair' })).toBeVisible()
-  expect(await image.getAttribute('src')).not.toBe(before)
+  await expect(image).not.toHaveAttribute('src', before!)
   await page.getByRole('button', { name: 'Undo last repair' }).click()
   await expect(image).toHaveAttribute('src', before!)
   await expect(image).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 0, 0)')
@@ -50,10 +50,31 @@ test('@claim:local-ocr runs the bundled worker and marks its on-device result', 
   const errors: string[] = []
   page.on('console', message => { if (message.type() === 'error') errors.push(message.text()) })
   await page.goto('/demo')
+  const workerResponse = page.waitForResponse(response => response.url().includes('/ocr/worker.min.js'))
   await page.getByRole('button', { name: 'Run OCR again' }).click()
+  expect((await workerResponse).headers()['content-security-policy']).toContain("'wasm-unsafe-eval'")
   await expect(page.getByText('recognised on this device')).toBeVisible({ timeout: 150_000 })
   await expect(page.getByLabel('Recognised page text')).not.toHaveValue('')
   expect(errors).toEqual([])
+})
+
+test('@claim:daily-license-check verifies a returned license once and caches its verdict for a day', async ({ page }) => {
+  const license = 'returned-demo-license'
+  let checks = 0
+  await page.route(`https://api.sociobot.in/api/v1/products/scan-repair-local/verify?license=${license}`, async route => {
+    checks += 1
+    await route.fulfill({ contentType: 'application/json', body: JSON.stringify({ valid: true }) })
+  })
+  await page.goto(`/?license=${license}`)
+  await expect.poll(() => checks).toBe(1)
+  await page.waitForTimeout(200)
+  expect(checks).toBe(1)
+  await expect(page).toHaveURL('http://localhost:4173/')
+  expect(await page.evaluate(token => localStorage.getItem('sb_license:scan-repair-local') === token, license)).toBe(true)
+  expect(await page.evaluate(token => {
+    const raw = localStorage.getItem(`sb_license_state:scan-repair-local:${token}`)
+    return raw ? Date.now() - JSON.parse(raw).checked < 86_400_000 : false
+  }, license)).toBe(true)
 })
 
 test('@claim:review-flagging marks a page for manual review and lets the reviewer reverse it', async ({ page }) => {

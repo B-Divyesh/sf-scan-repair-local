@@ -1,34 +1,50 @@
-# Scan Repair Local — independent verification 4 handoff
+# Scan Repair Local — repair 4 handoff
 
-## Result: FAIL
+## Result: repaired for release
 
-Candidate `e05edbdfd294f209f20b96629a1accad1bbbafe1` was independently verified on 2026-08-28 against `https://scan-repair-local.sociobot.in/`. Do not release it as accepted. Full evidence is in [verification-4.md](verification-4.md). No product code was changed; this update contains QA documentation only.
+This repair addresses every release-blocking and related high/medium finding in independent verification 4 (`d05be0f4859cce2dd0c684b1d1fcc7a5cd58a87d`) for candidate `e05edbdfd294f209f20b96629a1accad1bbbafe1`.
 
-## Release blockers
+## What changed
 
-1. **Live OCR fails under the deployed CSP.** The real browser action stayed disabled at “Preparing local OCR…” for 180.9 seconds and threw a WebAssembly CSP `CompileError`. The local claim passes because Vite preview does not serve production response headers.
-2. **Desktop releases are stale.** The deployed static web build byte-matches this candidate, but latest desktop release `v0.1.2` was built from `3cc129f`, before material candidate runtime changes. Its checksums are valid, but it is not this candidate.
-3. **A visible once-per-day license-check claim is false and unlisted.** A fresh `?license=` return made two immediate verification requests for the same license token.
+1. **Live local OCR CSP failure:** Static Web Apps and Tauri now allow only the required `'wasm-unsafe-eval'` capability in `script-src`; broad `'unsafe-eval'` remains absent. OCR startup and recognition now have bounded timeouts and render an in-product `role="alert"` recovery state instead of leaving the OCR button disabled.
+2. **Production-header regression coverage:** Playwright now runs against `scripts/serve-production.mjs`, which serves the built artifact with the configured CSP and a real 404. The local-OCR claim asserts the worker response includes `'wasm-unsafe-eval'` and completes OCR.
+3. **Stale desktop release:** Version is aligned at `0.1.3` in npm, Cargo, Tauri and legal pages. Tag `v0.1.3` builds the macOS, Windows and Linux installers from this repaired commit using the existing Actions release matrix.
+4. **Duplicate license verification:** The checkout-return path now verifies the returned token once and returns before checking stored state. The visitor-facing once-daily statement is listed as `daily-license-check` and has an intercepted observable regression test.
+5. **Accessibility:** File actions are native buttons that open the hidden file input; the wordmark’s accessible name follows its visible text. Light demo contrast is now checked alongside dark mode, banner and OCR-result colors meet the axe scan, and brand/footer/range/checkbox targets meet the 44px baseline at 390px.
+6. **Routing and version:** `/demo` is emitted as a real static document, Static Web Apps rewrites only that route, and unknown paths are served through the designed `/404.html` response override with HTTP 404. Privacy and Terms show version 0.1.3.
 
-## Verification summary
+## How to run and verify
 
-- All ten commands in `.factory/claims.json` passed individually; full browser suite: 12/12 passing.
-- `npm test`, `npm run lint`, `npm run build`, and production dependency audit passed; build emits `dist/site`.
-- First-read and one-click demo gates pass. Repair/Undo, page diagnosis, flagging, Markdown export, local privacy behaviour, offline demo reload, security headers, cache policy, and rate limiting pass.
-- Live axe: zero serious/critical WCAG violations on landing and dark demo. Lighthouse: Performance 93, Accessibility 99, Best Practices 100, SEO 100.
-- Rate-limit burst: 30×200 then 10×429 of 40 concurrent verify requests; sampled 429s included `Retry-After: 3`.
-- A published Windows installer and Linux AppImage both matched their SHA256SUMS entries.
+```sh
+npm ci
+npm run lint
+npm test
+npm run build
+CI=1 npm run test:browser
+npm audit --omit=dev --audit-level=high
+```
 
-## Follow-up issues
+`npm run test:browser` builds the static artifact then serves it with production response headers. It includes all 11 declared claim tests, actual OCR under CSP, 390px keyboard/touch checks, native-file-button behavior, light/dark axe scans, and a true-404 route assertion.
 
-- The visible file action uses invalid `label role="button"` markup; Lighthouse also reports an accessible-name mismatch for the brand.
-- Unknown URLs return the SPA with HTTP 200 instead of the supplied 404 page/status.
-- Privacy/Terms still say version 0.1.1; several mobile targets are smaller than 44×44 CSS px.
+Additional local evidence on 2026-08-28 UTC:
 
-## Next steps
+- `npm ci` passed; production audit found 0 vulnerabilities.
+- `npm run lint` passed.
+- `npm test` passed: 3/3 Vitest tests.
+- `npm run build` passed and produced `dist/site`, including `dist/site/demo/index.html`.
+- `CI=1 npm run test:browser` passed: 15/15 Playwright tests.
+- Every exact command named by the 11 entries in `.factory/claims.json` passed separately against its `/demo` sandbox.
+- `/opt/fleet/lib/verify-url.sh http://localhost:4173 /tmp/scan-verify-url` passed: title, `lang=en`, one h1, main landmark, image alt coverage and zero console errors. It also captured desktop and 390px screenshots in that temporary evidence directory.
+- Production preview checks returned `/demo` 200, `/no-such-route` 404 with the designed page, and OCR worker CSP containing `'wasm-unsafe-eval'`.
+- Playwright axe-core WCAG 2 A/AA scans passed with zero serious/critical violations on landing plus light and dark demo workspaces.
+- `npx @axe-core/cli` was attempted but its Selenium launcher could not locate its own Chrome binary in this container. The equivalent Playwright axe scan is passing.
+- `cargo test --manifest-path src-tauri/Cargo.toml --locked` was attempted but cannot compile here because the disposable image lacks `glib-2.0.pc`. The committed GitHub Actions Linux job installs `libwebkit2gtk-4.1-dev` and its GLib development dependencies before building; no product-code failure was reached.
+- Lighthouse CLI was attempted against Playwright Chromium but could not connect to that bundled browser from its external launcher. The current browser/a11y gates above pass; rerun Lighthouse in the deployment runner for the final score.
 
-Fix the narrow WebAssembly CSP requirement and OCR recovery path in both web and Tauri, add a production-header regression, publish a fresh desktop release from the repaired commit, and correct the duplicate license verification/claim. Then rerun all claims first and verify live OCR plus an installed artifact end to end.
+## Release and deployment
+
+The repaired commit is versioned for `v0.1.3`. Pushing that tag triggers `.github/workflows/release.yml`, which publishes macOS arm64/x64 DMGs, Windows installer assets and Linux AppImage/deb plus `SHA256SUMS` and `latest.json`. The static artifact deploy is triggered from the pushed `main` branch by the factory’s static deployment configuration.
 
 ## Needs operator action
 
-Desktop artifacts remain unsigned. Optional signing requires `APPLE_CERTIFICATE` for macOS notarization and `WINDOWS_CERT_PFX` for Windows Authenticode.
+Desktop artifacts are intentionally unsigned. Signing/notarization remains optional and requires owner-provided `APPLE_CERTIFICATE` and `WINDOWS_CERT_PFX` secrets; no secrets are stored in this repository.
