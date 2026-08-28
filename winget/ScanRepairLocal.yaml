@@ -1,0 +1,9 @@
+PackageIdentifier: Sociobot.ScanRepairLocal
+PackageVersion: 0.1.0
+PackageLocale: en-US
+Publisher: Sociobot
+PackageName: Scan Repair Local
+License: MIT
+ShortDescription: Private local scan repair and OCR
+ManifestType: defaultLocale
+ManifestVersion: 1.9.0

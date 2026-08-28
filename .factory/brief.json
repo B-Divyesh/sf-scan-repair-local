@@ -1,0 +1,8 @@
+{
+  "slug": "scan-repair-local",
+  "title": "Scan Repair Local",
+  "artifact_class": "desktop-app",
+  "user": "Readers and researchers with scanned books or archival PDFs who need usable text without uploading sensitive material.",
+  "smallest_useful_product": "Offline desktop/PWA tool that detects skew/blur/contrast, previews reversible repairs, runs local OCR, and exports searchable PDF plus Markdown with page references.",
+  "constraints": "Keep files on device by default; preserve originals; clearly label OCR uncertainty; do not imply archival-grade accuracy."
+}
