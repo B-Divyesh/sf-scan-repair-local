@@ -18,7 +18,7 @@ npm run test:claims
 
 ## What is stored
 
-Document pages and recognised text remain in browser/app memory while the workspace is open. A restored Local Pro license token is stored in local storage. The demo makes no third-party requests.
+Document pages and recognised text remain in browser/app memory while the workspace is open. The demo makes no third-party requests.
 
 ## Local Pro and installers
 

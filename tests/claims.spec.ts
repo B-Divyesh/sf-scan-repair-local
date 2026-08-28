@@ -33,6 +33,8 @@ test('@claim:reversible-repair applies rotation to pixels and undo restores the 
   await page.goto('/demo')
   const image = page.locator('#page-image')
   await expect(image).toBeVisible()
+  await expect(page.locator('#contrast')).toHaveValue('18')
+  await expect(page.locator('#sharpen')).toBeChecked()
   const before = await image.getAttribute('src')
   await page.getByRole('button', { name: 'Turn right' }).click()
   await page.getByRole('button', { name: 'Apply reversible repair' }).click()
