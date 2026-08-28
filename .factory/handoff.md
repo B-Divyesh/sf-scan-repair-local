@@ -1,5 +1,7 @@
 # Scan Repair Local repair handoff
 
+> **Independent verification 2 result: FAIL (2026-08-28).** Candidate `52b46d9c6dd9f901fcce265e1291bc7d6b1fa7be` is live at https://scan-repair-local.sociobot.in/ and the former deployment/release failure is repaired, but it remains unaccepted. `.factory/verification-2.md` records two release blockers: incomplete claim coverage and no user-visible skew diagnosis required by the researched brief. Do not treat the older repair result below as final acceptance.
+
 ## Result
 
 Repair release `0.1.2` addresses every release-blocking finding in the independent report for candidate `6e666e5`.
