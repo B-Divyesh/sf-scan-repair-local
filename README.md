@@ -16,6 +16,15 @@ npm run test:claims
 
 `npm run build` writes the static site to `dist/site`. Run `npm run dev` for the web workspace, or `npm run tauri dev` after installing the Rust toolchain for the Tauri desktop shell.
 
+On Linux, Tauri also needs the native packages used by WebKit and the desktop shell. On Debian or Ubuntu install them before `cargo test` or `npm run tauri dev`:
+
+```sh
+sudo apt-get update
+sudo apt-get install -y libwebkit2gtk-4.1-dev build-essential curl wget file libxdo-dev libssl-dev libayatana-appindicator3-dev librsvg2-dev libfuse2
+```
+
+This is the same prerequisite set used by the release workflow.
+
 ## What is stored
 
 Document pages and recognised text remain in browser/app memory while the workspace is open. The demo makes no third-party requests.

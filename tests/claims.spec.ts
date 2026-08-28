@@ -145,7 +145,7 @@ test('@claim:offline-demo reloads the demo after the first visit without a netwo
   const serviceWorker = await page.evaluate(async () => {
     await new Promise(resolve => setTimeout(resolve, 2000))
     const registration = await navigator.serviceWorker.getRegistration()
-    const cache = await caches.open('scan-repair-local-v11'); const entries = await cache.keys()
+    const cache = await caches.open('scan-repair-local-v12'); const entries = await cache.keys()
     return { url: location.href, secure: isSecureContext, hasServiceWorker: 'serviceWorker' in navigator, controller: Boolean(navigator.serviceWorker?.controller), installing: registration?.installing?.state, waiting: registration?.waiting?.state, active: registration?.active?.state, caches: await caches.keys(), entries: entries.map(entry => entry.url) }
   })
   expect(serviceWorker).toMatchObject({ controller: true, active: 'activated' })

@@ -57,6 +57,18 @@ test('demo startup reuses its measured fixture instead of rasterising it', async
   expect(await page.evaluate(() => (window as typeof window & { __demoRasterWrites: number }).__demoRasterWrites)).toBe(0)
 })
 
+test('cold demo discovery preloads its LCP sample before the SPA bundle runs', async ({ page }) => {
+  await page.goto('/demo')
+  const preload = page.locator('link[rel="preload"][as="image"][href="/sample-scan.svg"]')
+  await expect(preload).toHaveAttribute('fetchpriority', 'high')
+  const resources = await page.evaluate(() => performance.getEntriesByType('resource').map(entry => {
+    const resource = entry as PerformanceResourceTiming
+    return { name: resource.name, initiatorType: resource.initiatorType, startTime: resource.startTime }
+  }))
+  const sample = resources.find(entry => entry.name.endsWith('/sample-scan.svg'))
+  expect(sample).toMatchObject({ initiatorType: 'link' })
+})
+
 test('demo page media reserves its mobile layout before the image loads', async ({ browser }) => {
   const context = await browser.newContext({ viewport: { width: 390, height: 844 } })
   const page = await context.newPage()

@@ -1,6 +1,6 @@
 {
   "name": "scan-repair-local",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,6 +12,7 @@
     "test": "vitest run",
     "test:claims": "playwright test",
     "test:browser": "playwright test",
+    "test:performance": "npm run build:site && node scripts/performance-regression.mjs",
     "test:release": "vitest run scripts/verify-release.test.js",
     "lint": "tsc --noEmit",
     "test:watch": "vitest",
@@ -31,6 +32,7 @@
     "@vitejs/plugin-legacy": "^7.2.1",
     "axe-core": "^4.10.3",
     "jsdom": "^30.0.1",
+    "lighthouse": "^12.8.2",
     "playwright": "^1.58.2",
     "typescript": "^5.9.2",
     "vite": "^7.1.3",

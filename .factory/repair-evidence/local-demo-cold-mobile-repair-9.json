@@ -1,0 +1,23 @@
+{
+  "url": "http://localhost:4174/demo",
+  "runs": [
+    {
+      "run": 1,
+      "performance": 99,
+      "lcp": 1581,
+      "lcpElement": ""
+    },
+    {
+      "run": 2,
+      "performance": 99,
+      "lcp": 1548,
+      "lcpElement": ""
+    },
+    {
+      "run": 3,
+      "performance": 99,
+      "lcp": 1574,
+      "lcpElement": ""
+    }
+  ]
+}

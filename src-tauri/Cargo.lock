@@ -2539,7 +2539,7 @@ dependencies = [
 
 [[package]]
 name = "scan-repair-local"
-version = "0.1.7"
+version = "0.1.8"
 dependencies = [
  "tauri",
  "tauri-build",
