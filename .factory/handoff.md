@@ -1,50 +1,63 @@
-# Scan Repair Local repair handoff
+# Scan Repair Local — independent verification 3 handoff
 
-## Result
+## Result: FAIL
 
-This repair addresses both release blockers in independent verification 2 for candidate `52b46d9c6dd9f901fcce265e1291bc7d6b1fa7be` (report commit `9aa4f140019f0c1534dcaa434c0532b0864b0a1d`). The artifact remains a Tauri 2 desktop app with its static companion site in `dist/site`.
+Candidate `1e5e0101ce48c57f3d47965586c130ad3d5290eb` was independently tested on 2026-08-28 against `https://scan-repair-local.sociobot.in/`. Do not release it as accepted.
 
-## Repairs
+The full evidence and defect list are in [verification-3.md](verification-3.md). No product code was changed; this verification adds only QA documentation and evidence.
 
-- Replaced the unusable left/right brightness calculation with a bounded, sampled projection-profile estimate of the text-line angle. The workspace now shows contrast, sharpness, a signed skew estimate, a clockwise/counter-clockwise correction recommendation, and an explicit confidence label. It uses the estimate in the repair recommendation.
-- Added controlled-fixture unit coverage for +3° and -2.5° skew estimates.
-- Completed the claim ledger with exact demo tests for in-memory originals/Undo, before-repair diagnosis, actual bundled local OCR, manual review flags, and no-third-party-resource processing. Existing demo, repair, export, Pro, and offline claims remain covered.
-- The local OCR regression deliberately invokes the shipped Tesseract worker without routes or fixture responses and waits for the user-visible “recognised on this device” result.
-- Narrowed README wording to the observable storage and request boundaries. It no longer makes untested installer-release assertions.
+## Release blockers
 
-## Verification
+1. **Live OCR is broken by CSP.** The live action remained at “Preparing local OCR…” for 180 seconds and raised a WebAssembly CSP `CompileError`. The local claim test passes because Vite preview does not serve production headers. Real imported pages cannot reach either export because OCR never supplies text.
+2. **Desktop downloads are stale.** The latest `v0.1.2` artifacts were built from `3cc129f`, before the candidate's skew/OCR changes. The checksum-valid AppImage launches but visibly lacks “Skew estimate”; it still shows “Rotation / None.”
+3. **The light demo has a serious axe color-contrast violation** on four nodes. The current test checks dark demo only.
+4. **Claims remain incomplete.** “We check an active license at most once a day” is unlisted and false on the `?license=` return path, which makes two immediate verify calls. The broad offline and README release claims are not proven by their listed tests.
 
-From a clean install:
+## Other defects
+
+- Flag, repair, and reset rerenders move keyboard focus to `<body>`.
+- Rotation clamps correctly at ±8°, but its visible value remains “None” while turning.
+- Some mobile controls are under 44×44 px; the page number/status collide at 200% text.
+- Unknown routes return the landing page with HTTP 200 instead of the designed 404.
+- Legal pages omit skip links and show version 0.1.1 while the app is 0.1.2.
+- Scoop metadata points to v0.1.0 with a placeholder checksum; the winget file has no installer URL/hash.
+
+## Commands and results
 
 ```sh
-npm ci
-npm test
-npm run lint
-npm run build
-CI=1 npm run test:browser
-npm audit --omit=dev --audit-level=high
+npm ci                                             # pass
+# every command in .factory/claims.json separately # 10/10 pass
+npm test                                           # pass, 3 tests
+npm run lint                                       # pass
+CI=1 npm run test:browser                          # pass, 12 tests
+npm audit --omit=dev --audit-level=high            # pass, 0 vulnerabilities
+npm run build                                      # pass, dist/site
+cargo test --manifest-path src-tauri/Cargo.toml --locked # pass, 0 Rust tests
 ```
 
-Evidence from this repair:
+Factory `verify-url.sh` passed its cold-load smoke test. Lighthouse mobile scored 99 performance, 99 accessibility, 100 best practices, and 100 SEO; FCP 1.1 s, LCP 2.0 s, TBT 50 ms, CLS 0. Initial JS/CSS/hero budgets pass.
 
-- `npm ci` — pass; 0 audit vulnerabilities.
-- `npm test` — pass; 3 tests, including controlled skew fixtures.
-- `npm run lint` — pass.
-- `npm run build` — pass; writes `dist/site`. Initial entry JS is 8.84 kB gzip and CSS is 3.29 kB gzip; OCR/PDF dependencies remain deferred.
-- `CI=1 npm run test:browser` — pass; 12 browser tests: ten independently runnable `@claim:` tests plus landing/dark-workspace axe, keyboard, 390 px mobile layout, reduced motion, and offline reload.
-- Every command listed in `.factory/claims.json` was also run separately and passed. The local OCR claim completed against the bundled worker.
-- `npm audit --omit=dev --audit-level=high` — pass; 0 vulnerabilities.
-- The Playwright axe integration reports no serious or critical WCAG 2 A/AA findings on the landing or dark demo workspace.
-- `cargo check --manifest-path src-tauri/Cargo.toml` is blocked only by this disposable container missing the host `glib-2.0` development package (`glib-2.0.pc`). The release workflow installs its Linux GTK/WebKit prerequisites before building desktop artifacts.
+The local static build byte-matches the live HTML, entry JS, CSS, service worker, manifest, privacy, and terms files. Passive loads have no console errors; invoking OCR produces the blocking CSP error.
 
-## Deployment
+The Sociobot verify endpoint rate limit passed: a 60-request burst returned 30×200 and 30×429; 429 responses included `Retry-After: 4`.
 
-The repair commit is `6675c80` (`fix: complete scan diagnosis and claim coverage`) and is pushed to `origin/main`.
+## Verified positive behavior
 
-The static site was deployed from `dist/site` with Azure Static Web Apps CLI 2.0.10 to `sf-scan-repair-local` in resource group `sociobot`. The live `https://scan-repair-local.sociobot.in/` response was updated at `2026-08-28 12:21:41 UTC`; it serves the deployed entry bundle containing both `Skew estimate` and `recognised on this device`.
+- First-read and one-click demo gates pass.
+- Repair changes pixels and Undo restores them exactly.
+- Controlled +3° input reports a high-confidence 3.0° correction.
+- Markdown and seeded-license searchable-PDF exports work and include searchable page text.
+- Real PNG and two-page PDF imports work; invalid PDF recovery is clear.
+- Demo document data stays out of localStorage, sessionStorage, and IndexedDB.
+- Service-worker update cleanup and offline demo reload work.
+- Security headers and immutable hashed-asset caching are present.
+- Release matrix has macOS, Windows, and Linux assets; the downloaded Linux AppImage matched `SHA256SUMS` and launched under Xvfb.
+- No sign-in is present, so Entra tenant validation is not applicable.
 
-Post-deploy 390 px browser check: `/demo` loaded `Demo — Scan Repair Local`, showed `Level · low confidence` in the skew field for the straight sample, had page width exactly 390 px, and had no console errors. Live response headers include HSTS, `nosniff`, Referrer-Policy, Permissions-Policy, and the configured self-only CSP with the declared GitHub/Sociobot connects.
+## Next steps
+
+Fix CSP for bundled WASM in both web and Tauri, add a live-header OCR regression, publish a new release from the repaired commit, correct light-demo contrast, and close the claim/focus/mobile issues. Then rerun every claim command first and repeat live OCR plus installed-artifact OCR/export before acceptance.
 
 ## Needs operator action
 
-No signing credentials are configured. Optional signing requires `APPLE_CERTIFICATE` for notarized macOS and `WINDOWS_CERT_PFX` for Authenticode Windows builds. Until then the desktop installers remain unsigned.
+Desktop releases remain unsigned. Optional signing requires `APPLE_CERTIFICATE` for macOS notarization and `WINDOWS_CERT_PFX` for Windows Authenticode.
