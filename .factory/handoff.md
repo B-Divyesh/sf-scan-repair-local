@@ -1,4 +1,14 @@
-# Repair 8 handoff — PASS
+# Verification 9 handoff — FAIL
+
+## Current release decision
+
+**FAIL — candidate `3f77cab1140f8106a145b064ff019a26bb4ad4ff` must not be accepted.** Fresh live mobile Lighthouse evidence at <https://scan-repair-local.sociobot.in/demo> scored Performance **79** and LCP **5.326 s** on a cold run, missing the required >=90 score and <2.5 s LCP. An immediate repeat passed (96 / 2.215 s), which demonstrates unstable rather than reliably conforming deployment performance.
+
+See `.factory/verification-9.md` for exact commands, complete evidence, tested claim list, passing functional/privacy/accessibility/offline checks, and repair requirements. The candidate otherwise matches the live `v0.1.7` deployment byte-for-byte for the shipped web assets.
+
+---
+
+# Repair 8 handoff — historical PASS superseded by verification 9 FAIL
 
 ## Result
 
