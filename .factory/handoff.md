@@ -39,7 +39,11 @@ Evidence from this repair:
 
 ## Deployment
 
-The static deployment target is `sf-scan-repair-local` in Azure resource group `sociobot`. Deployment and post-deploy live checks are recorded after the repair commit is pushed.
+The repair commit is `6675c80` (`fix: complete scan diagnosis and claim coverage`) and is pushed to `origin/main`.
+
+The static site was deployed from `dist/site` with Azure Static Web Apps CLI 2.0.10 to `sf-scan-repair-local` in resource group `sociobot`. The live `https://scan-repair-local.sociobot.in/` response was updated at `2026-08-28 12:21:41 UTC`; it serves the deployed entry bundle containing both `Skew estimate` and `recognised on this device`.
+
+Post-deploy 390 px browser check: `/demo` loaded `Demo — Scan Repair Local`, showed `Level · low confidence` in the skew field for the straight sample, had page width exactly 390 px, and had no console errors. Live response headers include HSTS, `nosniff`, Referrer-Policy, Permissions-Policy, and the configured self-only CSP with the declared GitHub/Sociobot connects.
 
 ## Needs operator action
 
