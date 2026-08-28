@@ -1,0 +1,50 @@
+{
+  "offlineCore": {
+    "dialogs": [
+      "Local OCR could not start. Check that this app has its bundled language data available, then try again."
+    ],
+    "failed": [
+      {
+        "url": "https://scan-repair-local.sociobot.in/assets/index-DdBV6pZW.js",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "url": "https://scan-repair-local.sociobot.in/assets/_commonjsHelpers-Cpj98o6Y.js",
+        "error": "net::ERR_FAILED"
+      }
+    ],
+    "errors": [
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "TypeError: Failed to fetch dynamically imported module: https://scan-repair-local.sociobot.in/assets/index-DdBV6pZW.js"
+    ],
+    "button": "Recognise page text"
+  },
+  "realInputs": {
+    "imageDiagnosis": "Page 1 inspection\n\nRepair recommended\n\nContrast\n25/255\nSharpness\n3\nSkew estimate\n≤ 7.8°\nRepair preview\nContrast\n+18\nApply edge sharpening\n↶ Turn left\nTurn right ↷\nApply reversible repair\nLocal OCR\n\nRecognition runs in this browser/app. It may take a moment the first time language data is prepared.\n\nRecognise page textFlag for manual check\nExport\n\nMarkdown remains free. Searchable PDF is included with Local Pro.\n\nExport Markdown\nExport searchable PDF\nPRO",
+    "imageOCR": "Field notes from the archive\n\nThe river froze before dawn on January 14, 1926.\nResearchers should verify every uncertain word\nagainst the original page.\n\nCollection 17 - Box 4 + Page 1\n",
+    "imageConfidence": "High confidence · estimated 92%",
+    "pdfInfo": {
+      "count": 2,
+      "h1": "qa-two-pages.pdf · 2",
+      "labels": [
+        "01repair",
+        "02repair"
+      ]
+    },
+    "pdfPage1": "Archive page one\nThe catalog record is 1926-A.\n",
+    "pdfPage2": "Archive page two\nVerify this passage against the original.\n",
+    "markdown": "## Page 1\n\n<!-- OCR confidence: 94% — verify against original -->\n\nArchive page one\nThe catalog record is 1926-A.\n\n---\n\n## Page 2\n\n<!-- OCR confidence: 95% — verify against original -->\n\nArchive page two\nVerify this passage against the original.\n",
+    "pdfBytes": 64064,
+    "errors": [],
+    "dialogs": []
+  },
+  "demoRoute": {
+    "url": "https://scan-repair-local.sociobot.in/demo",
+    "title": "Scan Repair Local — make scans readable, privately",
+    "h1": "Turn a difficult scan into a usable page.",
+    "workspace": false,
+    "sample": true,
+    "banner": false
+  }
+}

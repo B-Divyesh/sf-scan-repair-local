@@ -1,0 +1,46 @@
+{
+  "local": {
+    "before": {
+      "controller": true,
+      "registrations": false
+    },
+    "reloadError": null,
+    "firstOffline": {
+      "appText": "SR Scan Repair Local\n      How it worksDownload app◐\n    \n      \n  A private reading-room toolTurn a difficult scan into a usable page.Inspect blur, skew and contrast. Make reversible repairs. Run OCR on your own machine, then export searchable PDF or Markdown with page references.Choose a scan ↗Try a sample pageFiles never leave this device. Printed text works best; handwriting is clearly marked for review.Inspect first. Trust the original.\n  \n  A short, inspectable pathFour stops between scan and search.01OpenBring in a PDF or page image. The original is retained in memory.02DiagnoseSee contrast, blur and a conservative skew estimate per page.03Repair & OCRPreview contrast and sharpening, then recognise text locally.04Review & exportFlag uncertain pages and export your reading copy with references.\n  Desktop app · one-time unlockKeep the workbench close to your files.The free app diagnoses, repairs and exports Markdown. A one-time Local Pro unlock adds searchable-PDF export and batch OCR. No subscription, no uploads.Download for LinuxRelease opens with SHA256SUMS for verification · unsigned build.Already have a license?Restore on this deviceRestoreBuy Local Pro · one time\n    \n    Scan Repair Local · Your pages stay on this device.Privacy · TermsIllustration generated for this product; no document data is sent to us.",
+      "h1": "Turn a difficult scan into a usable page.",
+      "controller": true
+    },
+    "secondOffline": {
+      "appText": "SR Scan Repair Local\n      How it worksDownload app◐\n    \n      \n  A private reading-room toolTurn a difficult scan into a usable page.Inspect blur, skew and contrast. Make reversible repairs. Run OCR on your own machine, then export searchable PDF or Markdown with page references.Choose a scan ↗Try a sample pageFiles never leave this device. Printed text works best; handwriting is clearly marked for review.Inspect first. Trust the original.\n  \n  A short, inspectable pathFour stops between scan and search.01OpenBring in a PDF or page image. The original is retained in memory.02DiagnoseSee contrast, blur and a conservative skew estimate per page.03Repair & OCRPreview contrast and sharpening, then recognise text locally.04Review & exportFlag uncertain pages and export your reading copy with references.\n  Desktop app · one-time unlockKeep the workbench close to your files.The free app diagnoses, repairs and exports Markdown. A one-time Local Pro unlock adds searchable-PDF export and batch OCR. No subscription, no uploads.Download for LinuxRelease opens with SHA256SUMS for verification · unsigned build.Already have a license?Restore on this deviceRestoreBuy Local Pro · one time\n    \n    Scan Repair Local · Your pages stay on this device.Privacy · TermsIllustration generated for this product; no document data is sent to us.",
+      "h1": "Turn a difficult scan into a usable page.",
+      "controller": true
+    },
+    "failures": [],
+    "errors": [],
+    "caches": [
+      "srl-v1"
+    ]
+  },
+  "live": {
+    "before": {
+      "controller": true,
+      "registrations": true
+    },
+    "reloadError": null,
+    "firstOffline": {
+      "appText": "SR Scan Repair Local\n      How it worksDownload app◐\n    \n      \n  A private reading-room toolTurn a difficult scan into a usable page.Inspect blur, skew and contrast. Make reversible repairs. Run OCR on your own machine, then export searchable PDF or Markdown with page references.Choose a scan ↗Try a sample pageFiles never leave this device. Printed text works best; handwriting is clearly marked for review.Inspect first. Trust the original.\n  \n  A short, inspectable pathFour stops between scan and search.01OpenBring in a PDF or page image. The original is retained in memory.02DiagnoseSee contrast, blur and a conservative skew estimate per page.03Repair & OCRPreview contrast and sharpening, then recognise text locally.04Review & exportFlag uncertain pages and export your reading copy with references.\n  Desktop app · one-time unlockKeep the workbench close to your files.The free app diagnoses, repairs and exports Markdown. A one-time Local Pro unlock adds searchable-PDF export and batch OCR. No subscription, no uploads.Download for LinuxRelease opens with SHA256SUMS for verification · unsigned build.Already have a license?Restore on this deviceRestoreBuy Local Pro · one time\n    \n    Scan Repair Local · Your pages stay on this device.Privacy · TermsIllustration generated for this product; no document data is sent to us.",
+      "h1": "Turn a difficult scan into a usable page.",
+      "controller": true
+    },
+    "secondOffline": {
+      "appText": "SR Scan Repair Local\n      How it worksDownload app◐\n    \n      \n  A private reading-room toolTurn a difficult scan into a usable page.Inspect blur, skew and contrast. Make reversible repairs. Run OCR on your own machine, then export searchable PDF or Markdown with page references.Choose a scan ↗Try a sample pageFiles never leave this device. Printed text works best; handwriting is clearly marked for review.Inspect first. Trust the original.\n  \n  A short, inspectable pathFour stops between scan and search.01OpenBring in a PDF or page image. The original is retained in memory.02DiagnoseSee contrast, blur and a conservative skew estimate per page.03Repair & OCRPreview contrast and sharpening, then recognise text locally.04Review & exportFlag uncertain pages and export your reading copy with references.\n  Desktop app · one-time unlockKeep the workbench close to your files.The free app diagnoses, repairs and exports Markdown. A one-time Local Pro unlock adds searchable-PDF export and batch OCR. No subscription, no uploads.Download for LinuxRelease opens with SHA256SUMS for verification · unsigned build.Already have a license?Restore on this deviceRestoreBuy Local Pro · one time\n    \n    Scan Repair Local · Your pages stay on this device.Privacy · TermsIllustration generated for this product; no document data is sent to us.",
+      "h1": "Turn a difficult scan into a usable page.",
+      "controller": true
+    },
+    "failures": [],
+    "errors": [],
+    "caches": [
+      "srl-v1"
+    ]
+  }
+}

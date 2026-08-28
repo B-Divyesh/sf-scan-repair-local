@@ -1,0 +1,8 @@
+2026-08-28 UTC
+Endpoint: GET https://api.sociobot.in/api/v1/products/scan-repair-local/verify?license=qa-invalid-rate-limit-token
+Method: 100 requests, concurrency 20
+Results: 31 HTTP 200; 69 HTTP 429
+First numbered 429 under concurrency: request 23
+Observed Retry-After values: 1–4 seconds
+Sample 429 also included x-ratelimit-after: 3
+Result: PASS

@@ -1,0 +1,498 @@
+{
+  "total_count": 5,
+  "jobs": [
+    {
+      "id": 98802809851,
+      "run_id": 33157233113,
+      "workflow_name": "Release desktop installers",
+      "head_branch": "v0.1.0",
+      "run_url": "https://api.github.com/repos/B-Divyesh/sf-scan-repair-local/actions/runs/33157233113",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUG3SWc8AAAAXARs7-w",
+      "head_sha": "6e666e560b742fcdaddac61c1bbcbec5aad011f1",
+      "url": "https://api.github.com/repos/B-Divyesh/sf-scan-repair-local/actions/jobs/98802809851",
+      "html_url": "https://github.com/B-Divyesh/sf-scan-repair-local/actions/runs/33157233113/job/98802809851",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-08-28T08:55:05Z",
+      "started_at": "2026-08-28T08:55:08Z",
+      "completed_at": "2026-08-28T09:00:18Z",
+      "name": "build (windows-latest, x86_64-pc-windows-msvc, windows-x64)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-08-28T08:55:09Z",
+          "completed_at": "2026-08-28T08:55:10Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-08-28T08:55:10Z",
+          "completed_at": "2026-08-28T08:55:15Z"
+        },
+        {
+          "name": "Run dtolnay/rust-toolchain@stable",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-08-28T08:55:15Z",
+          "completed_at": "2026-08-28T08:55:27Z"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-08-28T08:55:27Z",
+          "completed_at": "2026-08-28T08:55:41Z"
+        },
+        {
+          "name": "Install Linux Tauri prerequisites",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-08-28T08:55:41Z",
+          "completed_at": "2026-08-28T08:55:41Z"
+        },
+        {
+          "name": "Run npm ci",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-08-28T08:55:41Z",
+          "completed_at": "2026-08-28T08:56:03Z"
+        },
+        {
+          "name": "Run tauri-apps/tauri-action@v0",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 7,
+          "started_at": "2026-08-28T08:56:03Z",
+          "completed_at": "2026-08-28T09:00:14Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-08-28T09:00:14Z",
+          "completed_at": "2026-08-28T09:00:14Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-08-28T09:00:14Z",
+          "completed_at": "2026-08-28T09:00:14Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-08-28T09:00:14Z",
+          "completed_at": "2026-08-28T09:00:16Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-08-28T09:00:16Z",
+          "completed_at": "2026-08-28T09:00:16Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/B-Divyesh/sf-scan-repair-local/check-runs/98802809851",
+      "labels": [
+        "windows-latest"
+      ],
+      "runner_id": 1000005651,
+      "runner_name": "GitHub Actions 1000005651",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 98802809989,
+      "run_id": 33157233113,
+      "workflow_name": "Release desktop installers",
+      "head_branch": "v0.1.0",
+      "run_url": "https://api.github.com/repos/B-Divyesh/sf-scan-repair-local/actions/runs/33157233113",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUG3SWc8AAAAXARs8hQ",
+      "head_sha": "6e666e560b742fcdaddac61c1bbcbec5aad011f1",
+      "url": "https://api.github.com/repos/B-Divyesh/sf-scan-repair-local/actions/jobs/98802809989",
+      "html_url": "https://github.com/B-Divyesh/sf-scan-repair-local/actions/runs/33157233113/job/98802809989",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-08-28T08:55:05Z",
+      "started_at": "2026-08-28T09:07:44Z",
+      "completed_at": "2026-08-28T09:10:48Z",
+      "name": "build (macos-latest, x86_64-apple-darwin, macos-x64)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-08-28T09:07:44Z",
+          "completed_at": "2026-08-28T09:07:50Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-08-28T09:07:50Z",
+          "completed_at": "2026-08-28T09:07:53Z"
+        },
+        {
+          "name": "Run dtolnay/rust-toolchain@stable",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-08-28T09:07:53Z",
+          "completed_at": "2026-08-28T09:08:05Z"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-08-28T09:08:05Z",
+          "completed_at": "2026-08-28T09:08:07Z"
+        },
+        {
+          "name": "Install Linux Tauri prerequisites",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-08-28T09:08:07Z",
+          "completed_at": "2026-08-28T09:08:07Z"
+        },
+        {
+          "name": "Run npm ci",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-08-28T09:08:07Z",
+          "completed_at": "2026-08-28T09:08:15Z"
+        },
+        {
+          "name": "Run tauri-apps/tauri-action@v0",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 7,
+          "started_at": "2026-08-28T09:08:15Z",
+          "completed_at": "2026-08-28T09:10:42Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-08-28T09:10:42Z",
+          "completed_at": "2026-08-28T09:10:42Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-08-28T09:10:42Z",
+          "completed_at": "2026-08-28T09:10:42Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-08-28T09:10:42Z",
+          "completed_at": "2026-08-28T09:10:43Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-08-28T09:10:43Z",
+          "completed_at": "2026-08-28T09:10:45Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/B-Divyesh/sf-scan-repair-local/check-runs/98802809989",
+      "labels": [
+        "macos-latest"
+      ],
+      "runner_id": 1000005704,
+      "runner_name": "GitHub Actions 1000005704",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 98802810053,
+      "run_id": 33157233113,
+      "workflow_name": "Release desktop installers",
+      "head_branch": "v0.1.0",
+      "run_url": "https://api.github.com/repos/B-Divyesh/sf-scan-repair-local/actions/runs/33157233113",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUG3SWc8AAAAXARs8xQ",
+      "head_sha": "6e666e560b742fcdaddac61c1bbcbec5aad011f1",
+      "url": "https://api.github.com/repos/B-Divyesh/sf-scan-repair-local/actions/jobs/98802810053",
+      "html_url": "https://github.com/B-Divyesh/sf-scan-repair-local/actions/runs/33157233113/job/98802810053",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-08-28T08:55:05Z",
+      "started_at": "2026-08-28T08:55:07Z",
+      "completed_at": "2026-08-28T08:57:59Z",
+      "name": "build (ubuntu-latest, x86_64-unknown-linux-gnu, linux-x64)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-08-28T08:55:08Z",
+          "completed_at": "2026-08-28T08:55:10Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-08-28T08:55:10Z",
+          "completed_at": "2026-08-28T08:55:12Z"
+        },
+        {
+          "name": "Run dtolnay/rust-toolchain@stable",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-08-28T08:55:12Z",
+          "completed_at": "2026-08-28T08:55:12Z"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-08-28T08:55:12Z",
+          "completed_at": "2026-08-28T08:55:13Z"
+        },
+        {
+          "name": "Install Linux Tauri prerequisites",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-08-28T08:55:13Z",
+          "completed_at": "2026-08-28T08:55:49Z"
+        },
+        {
+          "name": "Run npm ci",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-08-28T08:55:49Z",
+          "completed_at": "2026-08-28T08:55:55Z"
+        },
+        {
+          "name": "Run tauri-apps/tauri-action@v0",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 7,
+          "started_at": "2026-08-28T08:55:55Z",
+          "completed_at": "2026-08-28T08:57:56Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-08-28T08:57:56Z",
+          "completed_at": "2026-08-28T08:57:56Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-08-28T08:57:56Z",
+          "completed_at": "2026-08-28T08:57:56Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-08-28T08:57:56Z",
+          "completed_at": "2026-08-28T08:57:57Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-08-28T08:57:57Z",
+          "completed_at": "2026-08-28T08:57:57Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/B-Divyesh/sf-scan-repair-local/check-runs/98802810053",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000005652,
+      "runner_name": "GitHub Actions 1000005652",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 98802810058,
+      "run_id": 33157233113,
+      "workflow_name": "Release desktop installers",
+      "head_branch": "v0.1.0",
+      "run_url": "https://api.github.com/repos/B-Divyesh/sf-scan-repair-local/actions/runs/33157233113",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUG3SWc8AAAAXARs8yg",
+      "head_sha": "6e666e560b742fcdaddac61c1bbcbec5aad011f1",
+      "url": "https://api.github.com/repos/B-Divyesh/sf-scan-repair-local/actions/jobs/98802810058",
+      "html_url": "https://github.com/B-Divyesh/sf-scan-repair-local/actions/runs/33157233113/job/98802810058",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-08-28T08:55:05Z",
+      "started_at": "2026-08-28T09:10:50Z",
+      "completed_at": "2026-08-28T09:13:46Z",
+      "name": "build (macos-latest, aarch64-apple-darwin, macos-arm64)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-08-28T09:10:50Z",
+          "completed_at": "2026-08-28T09:10:53Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-08-28T09:10:53Z",
+          "completed_at": "2026-08-28T09:10:55Z"
+        },
+        {
+          "name": "Run dtolnay/rust-toolchain@stable",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-08-28T09:10:55Z",
+          "completed_at": "2026-08-28T09:11:03Z"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-08-28T09:11:03Z",
+          "completed_at": "2026-08-28T09:11:04Z"
+        },
+        {
+          "name": "Install Linux Tauri prerequisites",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-08-28T09:11:04Z",
+          "completed_at": "2026-08-28T09:11:04Z"
+        },
+        {
+          "name": "Run npm ci",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-08-28T09:11:04Z",
+          "completed_at": "2026-08-28T09:11:12Z"
+        },
+        {
+          "name": "Run tauri-apps/tauri-action@v0",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 7,
+          "started_at": "2026-08-28T09:11:12Z",
+          "completed_at": "2026-08-28T09:13:42Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-08-28T09:13:42Z",
+          "completed_at": "2026-08-28T09:13:42Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-08-28T09:13:42Z",
+          "completed_at": "2026-08-28T09:13:42Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-08-28T09:13:42Z",
+          "completed_at": "2026-08-28T09:13:42Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-08-28T09:13:42Z",
+          "completed_at": "2026-08-28T09:13:43Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/B-Divyesh/sf-scan-repair-local/check-runs/98802810058",
+      "labels": [
+        "macos-latest"
+      ],
+      "runner_id": 1000005722,
+      "runner_name": "GitHub Actions 1000005722",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 98806959615,
+      "run_id": 33157233113,
+      "workflow_name": "Release desktop installers",
+      "head_branch": "v0.1.0",
+      "run_url": "https://api.github.com/repos/B-Divyesh/sf-scan-repair-local/actions/runs/33157233113",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUG3SWc8AAAAXAVqN_w",
+      "head_sha": "6e666e560b742fcdaddac61c1bbcbec5aad011f1",
+      "url": "https://api.github.com/repos/B-Divyesh/sf-scan-repair-local/actions/jobs/98806959615",
+      "html_url": "https://github.com/B-Divyesh/sf-scan-repair-local/actions/runs/33157233113/job/98806959615",
+      "status": "completed",
+      "conclusion": "skipped",
+      "created_at": "2026-08-28T09:13:46Z",
+      "started_at": "2026-08-28T09:13:46Z",
+      "completed_at": "2026-08-28T09:13:46Z",
+      "name": "release",
+      "steps": [
+
+      ],
+      "check_run_url": "https://api.github.com/repos/B-Divyesh/sf-scan-repair-local/check-runs/98806959615",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": null,
+      "runner_name": null,
+      "runner_group_id": null,
+      "runner_group_name": null
+    }
+  ]
+}

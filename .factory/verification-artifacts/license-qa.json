@@ -1,0 +1,20 @@
+{
+  "first": {
+    "url": "https://scan-repair-local.sociobot.in/",
+    "token": "qa-invalid-first",
+    "verdict": "invalid",
+    "checked": "1787911257439",
+    "notice": "License no longer active. Free features remain available.",
+    "visibleNotice": 1
+  },
+  "second": {
+    "token": "qa-different-second",
+    "verdict": "invalid",
+    "checked": "1787911257439",
+    "notice": "License saved locally and is being verified."
+  },
+  "verifyRequestCount": 1,
+  "verifies": [
+    "https://api.sociobot.in/api/v1/products/scan-repair-local/verify?license=qa-invalid-first"
+  ]
+}

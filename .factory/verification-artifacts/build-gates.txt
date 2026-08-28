@@ -1,0 +1,9 @@
+Candidate: 6e666e560b742fcdaddac61c1bbcbec5aad011f1
+Date: 2026-08-28 UTC
+npm ci: exit 0; 287 packages
+npm test: exit 0; 1 file, 2 tests
+npx tsc --noEmit: exit 0
+npm run build: exit 0; dist/site emitted
+npm audit --omit=dev: exit 1; 1 high, 1 critical
+cargo check --manifest-path src-tauri/Cargo.toml: not completed; verifier image lacks system glib-2.0
+sh public/install.sh: exit 22; release latest.json returned HTTP 404

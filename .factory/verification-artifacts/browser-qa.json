@@ -1,0 +1,561 @@
+{
+  "localDesktop": {
+    "status": 200,
+    "facts": {
+      "title": "Scan Repair Local — make scans readable, privately",
+      "lang": "en",
+      "h1Count": 1,
+      "h1": "Turn a difficult scan into a usable page.",
+      "mainCount": 1,
+      "firstScreenText": "A private reading-room toolTurn a difficult scan into a usable page.Inspect blur, skew and contrast. Make reversible repairs. Run OCR on your own machine, then export searchable PDF or Markdown with page references.Choose a scan ↗Try a sample pageFiles never leave this device. Printed text works best; handwriting is clearly marked for review.Inspect first. Trust the original.",
+      "sampleText": "Try a sample page",
+      "demoBanner": false,
+      "missingAlt": 0,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "reducedTransition": "1e-05s",
+      "links": [
+        {
+          "text": "Skip to document workspace",
+          "href": "http://127.0.0.1:4173/#main"
+        },
+        {
+          "text": "SR Scan Repair Local",
+          "href": "http://127.0.0.1:4173/"
+        },
+        {
+          "text": "How it works",
+          "href": "http://127.0.0.1:4173/#how"
+        },
+        {
+          "text": "Download app",
+          "href": "http://127.0.0.1:4173/#download"
+        },
+        {
+          "text": "Download for Linux",
+          "href": "https://github.com/B-Divyesh/sf-scan-repair-local/releases/latest"
+        },
+        {
+          "text": "Buy Local Pro · one time",
+          "href": "https://api.sociobot.in/api/v1/products/scan-repair-local/checkout"
+        },
+        {
+          "text": "Privacy",
+          "href": "http://127.0.0.1:4173/privacy"
+        },
+        {
+          "text": "Terms",
+          "href": "http://127.0.0.1:4173/terms"
+        }
+      ]
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "requests": [
+      {
+        "url": "http://127.0.0.1:4173/",
+        "method": "GET",
+        "type": "document"
+      },
+      {
+        "url": "http://127.0.0.1:4173/assets/index-Dc1M0w6r.js",
+        "method": "GET",
+        "type": "script"
+      },
+      {
+        "url": "http://127.0.0.1:4173/assets/index-DCiGvZWv.css",
+        "method": "GET",
+        "type": "stylesheet"
+      },
+      {
+        "url": "http://127.0.0.1:4173/reading-room.webp",
+        "method": "GET",
+        "type": "image"
+      }
+    ],
+    "axe": [],
+    "darkAxe": []
+  },
+  "liveDesktop": {
+    "status": 200,
+    "facts": {
+      "title": "Scan Repair Local — make scans readable, privately",
+      "lang": "en",
+      "h1Count": 1,
+      "h1": "Turn a difficult scan into a usable page.",
+      "mainCount": 1,
+      "firstScreenText": "A private reading-room toolTurn a difficult scan into a usable page.Inspect blur, skew and contrast. Make reversible repairs. Run OCR on your own machine, then export searchable PDF or Markdown with page references.Choose a scan ↗Try a sample pageFiles never leave this device. Printed text works best; handwriting is clearly marked for review.Inspect first. Trust the original.",
+      "sampleText": "Try a sample page",
+      "demoBanner": false,
+      "missingAlt": 0,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "reducedTransition": "1e-05s",
+      "links": [
+        {
+          "text": "Skip to document workspace",
+          "href": "https://scan-repair-local.sociobot.in/#main"
+        },
+        {
+          "text": "SR Scan Repair Local",
+          "href": "https://scan-repair-local.sociobot.in/"
+        },
+        {
+          "text": "How it works",
+          "href": "https://scan-repair-local.sociobot.in/#how"
+        },
+        {
+          "text": "Download app",
+          "href": "https://scan-repair-local.sociobot.in/#download"
+        },
+        {
+          "text": "Download for Linux",
+          "href": "https://github.com/B-Divyesh/sf-scan-repair-local/releases/latest"
+        },
+        {
+          "text": "Buy Local Pro · one time",
+          "href": "https://api.sociobot.in/api/v1/products/scan-repair-local/checkout"
+        },
+        {
+          "text": "Privacy",
+          "href": "https://scan-repair-local.sociobot.in/privacy"
+        },
+        {
+          "text": "Terms",
+          "href": "https://scan-repair-local.sociobot.in/terms"
+        }
+      ]
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "requests": [
+      {
+        "url": "https://scan-repair-local.sociobot.in/",
+        "method": "GET",
+        "type": "document"
+      },
+      {
+        "url": "https://scan-repair-local.sociobot.in/assets/index-Dc1M0w6r.js",
+        "method": "GET",
+        "type": "script"
+      },
+      {
+        "url": "https://scan-repair-local.sociobot.in/assets/index-DCiGvZWv.css",
+        "method": "GET",
+        "type": "stylesheet"
+      },
+      {
+        "url": "https://scan-repair-local.sociobot.in/reading-room.webp",
+        "method": "GET",
+        "type": "image"
+      }
+    ],
+    "axe": [],
+    "darkAxe": []
+  },
+  "liveMobile": {
+    "status": 200,
+    "facts": {
+      "title": "Scan Repair Local — make scans readable, privately",
+      "lang": "en",
+      "h1Count": 1,
+      "h1": "Turn a difficult scan into a usable page.",
+      "mainCount": 1,
+      "firstScreenText": "A private reading-room toolTurn a difficult scan into a usable page.Inspect blur, skew and contrast. Make reversible repairs. Run OCR on your own machine, then export searchable PDF or Markdown with page references.Choose a scan ↗Try a sample pageFiles never leave this device. Printed text works best; handwriting is clearly marked for review.Inspect first. Trust the original.",
+      "sampleText": "Try a sample page",
+      "demoBanner": false,
+      "missingAlt": 0,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "reducedTransition": "1e-05s",
+      "links": [
+        {
+          "text": "Skip to document workspace",
+          "href": "https://scan-repair-local.sociobot.in/#main"
+        },
+        {
+          "text": "SR Scan Repair Local",
+          "href": "https://scan-repair-local.sociobot.in/"
+        },
+        {
+          "text": "How it works",
+          "href": "https://scan-repair-local.sociobot.in/#how"
+        },
+        {
+          "text": "Download app",
+          "href": "https://scan-repair-local.sociobot.in/#download"
+        },
+        {
+          "text": "Download for Linux",
+          "href": "https://github.com/B-Divyesh/sf-scan-repair-local/releases/latest"
+        },
+        {
+          "text": "Buy Local Pro · one time",
+          "href": "https://api.sociobot.in/api/v1/products/scan-repair-local/checkout"
+        },
+        {
+          "text": "Privacy",
+          "href": "https://scan-repair-local.sociobot.in/privacy"
+        },
+        {
+          "text": "Terms",
+          "href": "https://scan-repair-local.sociobot.in/terms"
+        }
+      ]
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "requests": [
+      {
+        "url": "https://scan-repair-local.sociobot.in/",
+        "method": "GET",
+        "type": "document"
+      },
+      {
+        "url": "https://scan-repair-local.sociobot.in/assets/index-Dc1M0w6r.js",
+        "method": "GET",
+        "type": "script"
+      },
+      {
+        "url": "https://scan-repair-local.sociobot.in/assets/index-DCiGvZWv.css",
+        "method": "GET",
+        "type": "stylesheet"
+      },
+      {
+        "url": "https://scan-repair-local.sociobot.in/reading-room.webp",
+        "method": "GET",
+        "type": "image"
+      }
+    ],
+    "axe": [],
+    "darkAxe": []
+  },
+  "localWorkflow": {
+    "dialogs": [
+      "Could not open this file. Unsupported image"
+    ],
+    "recoveredAfterInvalid": true,
+    "afterSample": {
+      "url": "http://127.0.0.1:4173/",
+      "h1": "archival-sample.webp",
+      "banner": false,
+      "reset": false,
+      "startReal": false,
+      "pageCount": 1,
+      "diagnosis": "Contrast61/255Sharpness59Skew estimate≤ 8°",
+      "status": "Looks usable"
+    },
+    "repair": {
+      "boundedRotate": "rotate(8deg)",
+      "srcChangedOnApply": true,
+      "undoRestoredOriginal": false,
+      "sourceUnchangedByUndo": true,
+      "afterUndoTransform": "rotate(8deg)"
+    },
+    "ocrElapsedMs": 5988,
+    "ocr": {
+      "summary": "Needs review · estimated 17%",
+      "text": "a p No\na 5 amy Na\n. ee ; EN E 21\nhE sa ag 0 Lov gn he ROAR. Of\nCo a =. rk NN:\n=... TAYE ion\noy ....._ ir 5d\na. ; Ai . mo as oo\n. a 4 i a :\n= _ Se No\na fy A se boulud go\na. - ; eC a aE\n= of £1 SN ge\noe. So be a oY\nEa Be So TIE ‘ Sm ¢ Soa So\nam Te We 4. < =\n\na TE SRR. Wl of a : - J on Ney\n",
+      "markdownDisabled": false,
+      "pdfDisabled": false
+    },
+    "markdown": "## Page 1\n\n<!-- OCR confidence: 17% — verify against original -->\n\na p No\na 5 amy Na\n. ee ; EN E 21\nhE sa ag 0 Lov gn he ROAR. Of\nCo a =. rk NN:\n=... TAYE ion\noy ....._ ir 5d\na. ; Ai . mo as oo\n. a 4 i a :\n= _ Se No\na fy A se boulud go\na. - ; eC a aE\n= of £1 SN ge\noe. So be a oY\nEa Be So TIE ‘ Sm ¢ Soa So\nam Te We 4. < =\n\na TE SRR. Wl of a : - J on Ney\n",
+    "consoleErrors": [],
+    "pageErrors": [],
+    "requestOrigins": [
+      "http://127.0.0.1:4173"
+    ],
+    "requests": [
+      "http://127.0.0.1:4173/",
+      "http://127.0.0.1:4173/assets/index-Dc1M0w6r.js",
+      "http://127.0.0.1:4173/assets/index-DCiGvZWv.css",
+      "http://127.0.0.1:4173/reading-room.webp",
+      "http://127.0.0.1:4173/reading-room.webp",
+      "http://127.0.0.1:4173/assets/index-DdBV6pZW.js",
+      "http://127.0.0.1:4173/assets/_commonjsHelpers-Cpj98o6Y.js",
+      "blob:http://127.0.0.1:4173/458de012-3834-4a5a-a920-f5528794ec43",
+      "http://127.0.0.1:4173/ocr/worker.min.js",
+      "http://127.0.0.1:4173/ocr/tesseract-core-simd-lstm.wasm.js",
+      "http://127.0.0.1:4173/ocr/eng.traineddata.gz"
+    ]
+  },
+  "liveWorkflow": {
+    "dialogs": [
+      "Could not open this file. Unsupported image"
+    ],
+    "recoveredAfterInvalid": true,
+    "afterSample": {
+      "url": "https://scan-repair-local.sociobot.in/",
+      "h1": "archival-sample.webp",
+      "banner": false,
+      "reset": false,
+      "startReal": false,
+      "pageCount": 1,
+      "diagnosis": "Contrast61/255Sharpness59Skew estimate≤ 8°",
+      "status": "Looks usable"
+    },
+    "repair": {
+      "boundedRotate": "rotate(8deg)",
+      "srcChangedOnApply": true,
+      "undoRestoredOriginal": false,
+      "sourceUnchangedByUndo": true,
+      "afterUndoTransform": "rotate(8deg)"
+    },
+    "ocrElapsedMs": 5914,
+    "ocr": {
+      "summary": "Needs review · estimated 17%",
+      "text": "a p No\na 5 amy Na\n. ee ; EN E 21\nhE sa ag 0 Lov gn he ROAR. Of\nCo a =. rk NN:\n=... TAYE ion\noy ....._ ir 5d\na. ; Ai . mo as oo\n. a 4 i a :\n= _ Se No\na fy A se boulud go\na. - ; eC a aE\n= of £1 SN ge\noe. So be a oY\nEa Be So TIE ‘ Sm ¢ Soa So\nam Te We 4. < =\n\na TE SRR. Wl of a : - J on Ney\n",
+      "markdownDisabled": false,
+      "pdfDisabled": false
+    },
+    "markdown": "## Page 1\n\n<!-- OCR confidence: 17% — verify against original -->\n\na p No\na 5 amy Na\n. ee ; EN E 21\nhE sa ag 0 Lov gn he ROAR. Of\nCo a =. rk NN:\n=... TAYE ion\noy ....._ ir 5d\na. ; Ai . mo as oo\n. a 4 i a :\n= _ Se No\na fy A se boulud go\na. - ; eC a aE\n= of £1 SN ge\noe. So be a oY\nEa Be So TIE ‘ Sm ¢ Soa So\nam Te We 4. < =\n\na TE SRR. Wl of a : - J on Ney\n",
+    "consoleErrors": [],
+    "pageErrors": [],
+    "requestOrigins": [
+      "https://scan-repair-local.sociobot.in"
+    ],
+    "requests": [
+      "https://scan-repair-local.sociobot.in/",
+      "https://scan-repair-local.sociobot.in/assets/index-Dc1M0w6r.js",
+      "https://scan-repair-local.sociobot.in/assets/index-DCiGvZWv.css",
+      "https://scan-repair-local.sociobot.in/reading-room.webp",
+      "https://scan-repair-local.sociobot.in/reading-room.webp",
+      "https://scan-repair-local.sociobot.in/assets/index-DdBV6pZW.js",
+      "https://scan-repair-local.sociobot.in/assets/_commonjsHelpers-Cpj98o6Y.js",
+      "blob:https://scan-repair-local.sociobot.in/a7daeca7-d197-467e-99ec-c197d41e9fbb",
+      "https://scan-repair-local.sociobot.in/ocr/worker.min.js",
+      "https://scan-repair-local.sociobot.in/ocr/tesseract-core-simd-lstm.wasm.js",
+      "https://scan-repair-local.sociobot.in/ocr/eng.traineddata.gz"
+    ]
+  },
+  "keyboard": {
+    "tabs": [
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Skip to document workspace",
+        "aria": null,
+        "outline": "rgb(0, 95, 204) solid 3px",
+        "rect": {
+          "x": 8,
+          "y": 8,
+          "w": 270.453125,
+          "h": 44
+        },
+        "visible": true
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "SR Scan Repair Local",
+        "aria": "Scan Repair Local home",
+        "outline": "rgb(0, 95, 204) solid 3px",
+        "rect": {
+          "x": 16,
+          "y": 21,
+          "w": 205.125,
+          "h": 33
+        },
+        "visible": true
+      },
+      {
+        "tag": "BUTTON",
+        "id": "theme",
+        "text": "◐",
+        "aria": "Toggle color scheme",
+        "outline": "rgb(0, 95, 204) solid 3px",
+        "rect": {
+          "x": 348.359375,
+          "y": 15.5,
+          "w": 25.640625,
+          "h": 44
+        },
+        "visible": true
+      },
+      {
+        "tag": "BUTTON",
+        "id": "sample",
+        "text": "Try a sample page",
+        "aria": null,
+        "outline": "rgb(0, 95, 204) solid 3px",
+        "rect": {
+          "x": 202,
+          "y": 443.125,
+          "w": 171,
+          "h": 72
+        },
+        "visible": true
+      },
+      {
+        "tag": "INPUT",
+        "id": "file-input",
+        "text": "",
+        "aria": null,
+        "outline": "rgb(0, 95, 204) solid 3px",
+        "rect": {
+          "x": -1,
+          "y": 1514.75,
+          "w": 1,
+          "h": 1
+        },
+        "visible": true
+      },
+      {
+        "tag": "A",
+        "id": "download-link",
+        "text": "Download for Linux",
+        "aria": null,
+        "outline": "rgb(0, 95, 204) solid 3px",
+        "rect": {
+          "x": 15,
+          "y": 2575.96875,
+          "w": 205.390625,
+          "h": 48
+        },
+        "visible": true
+      },
+      {
+        "tag": "INPUT",
+        "id": "license",
+        "text": "",
+        "aria": null,
+        "outline": "rgb(0, 95, 204) solid 3px",
+        "rect": {
+          "x": 42,
+          "y": 2840.34375,
+          "w": 206.5625,
+          "h": 48
+        },
+        "visible": true
+      },
+      {
+        "tag": "BUTTON",
+        "id": "restore",
+        "text": "Restore",
+        "aria": null,
+        "outline": "rgb(0, 95, 204) solid 3px",
+        "rect": {
+          "x": 248.5625,
+          "y": 2840.34375,
+          "w": 99.4375,
+          "h": 48
+        },
+        "visible": true
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Buy Local Pro · one time",
+        "aria": null,
+        "outline": "rgb(0, 95, 204) solid 3px",
+        "rect": {
+          "x": 42,
+          "y": 2906.34375,
+          "w": 196.421875,
+          "h": 16
+        },
+        "visible": true
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Privacy",
+        "aria": null,
+        "outline": "rgb(0, 95, 204) solid 3px",
+        "rect": {
+          "x": 16,
+          "y": 3075.8125,
+          "w": 51.234375,
+          "h": 14
+        },
+        "visible": true
+      }
+    ],
+    "controls": [
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Skip to document workspace",
+        "w": 270.453125,
+        "h": 44
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "SR Scan Repair Local",
+        "w": 205.125,
+        "h": 33
+      },
+      {
+        "tag": "BUTTON",
+        "id": "theme",
+        "text": "◐",
+        "w": 25.640625,
+        "h": 44
+      },
+      {
+        "tag": "LABEL",
+        "id": "",
+        "text": "Choose a scan ↗",
+        "w": 171,
+        "h": 72
+      },
+      {
+        "tag": "BUTTON",
+        "id": "sample",
+        "text": "Try a sample page",
+        "w": 171,
+        "h": 72
+      },
+      {
+        "tag": "INPUT",
+        "id": "file-input",
+        "text": "",
+        "w": 1,
+        "h": 1
+      },
+      {
+        "tag": "A",
+        "id": "download-link",
+        "text": "Download for Linux",
+        "w": 205.390625,
+        "h": 48
+      },
+      {
+        "tag": "INPUT",
+        "id": "license",
+        "text": "",
+        "w": 206.5625,
+        "h": 48
+      },
+      {
+        "tag": "BUTTON",
+        "id": "restore",
+        "text": "Restore",
+        "w": 99.4375,
+        "h": 48
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Buy Local Pro · one time",
+        "w": 196.421875,
+        "h": 16
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Privacy",
+        "w": 51.234375,
+        "h": 14
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Terms",
+        "w": 36.59375,
+        "h": 14
+      }
+    ]
+  }
+}

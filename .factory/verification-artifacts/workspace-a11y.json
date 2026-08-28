@@ -1,0 +1,107 @@
+{
+  "violations": [
+    {
+      "id": "label",
+      "impact": "critical",
+      "help": "Form elements must have labels",
+      "nodes": 1,
+      "targets": [
+        [
+          "#add-input"
+        ]
+      ]
+    }
+  ],
+  "sizes": [
+    {
+      "tag": "A",
+      "id": "",
+      "text": "SR Scan Repair Local",
+      "w": 205.125,
+      "h": 33
+    },
+    {
+      "tag": "BUTTON",
+      "id": "theme",
+      "text": "◐",
+      "w": 25.640625,
+      "h": 44
+    },
+    {
+      "tag": "INPUT",
+      "id": "add-input",
+      "text": "",
+      "w": 1,
+      "h": 1
+    },
+    {
+      "tag": "INPUT",
+      "id": "contrast",
+      "text": "",
+      "w": 358,
+      "h": 16
+    },
+    {
+      "tag": "INPUT",
+      "id": "sharpen",
+      "text": "",
+      "w": 13,
+      "h": 13
+    },
+    {
+      "tag": "BUTTON",
+      "id": "turn-left",
+      "text": "↶ Turn left",
+      "w": 97.484375,
+      "h": 39
+    },
+    {
+      "tag": "BUTTON",
+      "id": "turn-right",
+      "text": "Turn right ↷",
+      "w": 104.703125,
+      "h": 39
+    },
+    {
+      "tag": "BUTTON",
+      "id": "flag",
+      "text": "Flag for manual check",
+      "w": 218.296875,
+      "h": 40
+    },
+    {
+      "tag": "A",
+      "id": "",
+      "text": "Privacy",
+      "w": 51.234375,
+      "h": 14
+    },
+    {
+      "tag": "A",
+      "id": "",
+      "text": "Terms",
+      "w": 36.59375,
+      "h": 14
+    }
+  ],
+  "base": {
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "active": "BODY"
+  },
+  "resized": {
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "bodyHeight": 2724,
+    "h1": {
+      "x": 16,
+      "y": 238.65625,
+      "width": 358,
+      "height": 122.875,
+      "top": 238.65625,
+      "right": 374,
+      "bottom": 361.53125,
+      "left": 16
+    }
+  }
+}

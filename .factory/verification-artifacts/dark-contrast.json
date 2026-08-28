@@ -1,0 +1,28 @@
+{
+  "violations": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": [
+        {
+          "target": [
+            ".mark"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.11 (foreground color: #ffffff, background color: #ff9589, font size: 8.4pt (11.2px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "label[for=\"file-input\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.71 (foreground color: #ffffff, background color: #8fd5aa, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "#download-link"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.71 (foreground color: #ffffff, background color: #8fd5aa, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    }
+  ]
+}
