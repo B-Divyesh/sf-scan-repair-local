@@ -1,0 +1,25 @@
+{
+  "download": {
+    "suggestedFilename": "Scan.Repair.Local_0.1.4_amd64.AppImage",
+    "url": "GitHub release asset redirect resolved (temporary signed URL omitted)",
+    "githubApiRequested": true,
+    "errors": []
+  },
+  "license": {
+    "first": {
+      "url": "https://scan-repair-local.sociobot.in/",
+      "stored": "qa-invalid-fresh-6",
+      "notice": "License no longer active. Free features remain available.",
+      "verify": 1
+    },
+    "verifyAfterReload": 1,
+    "stateKeys": [
+      "sb_license:scan-repair-local",
+      "sb_license_state:scan-repair-local:qa-invalid-fresh-6"
+    ]
+  },
+  "checkout": {
+    "status": 303,
+    "location": "https://checkout.dodopayments.com/session/[redacted]"
+  }
+}

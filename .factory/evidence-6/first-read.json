@@ -1,0 +1,248 @@
+[
+  {
+    "cfg": {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900
+    },
+    "first": {
+      "title": "Scan Repair Local — make scans readable",
+      "lang": "en",
+      "h1": [
+        "Make scanned pages readable."
+      ],
+      "visible": [
+        {
+          "tag": "A",
+          "text": "SR Scan Repair Local home",
+          "top": 16
+        },
+        {
+          "tag": "A",
+          "text": "Demo",
+          "top": 28
+        },
+        {
+          "tag": "A",
+          "text": "How it works",
+          "top": 28
+        },
+        {
+          "tag": "A",
+          "text": "Download app",
+          "top": 28
+        },
+        {
+          "tag": "A",
+          "text": "Privacy",
+          "top": 28
+        },
+        {
+          "tag": "BUTTON",
+          "text": "◐",
+          "top": 16
+        },
+        {
+          "tag": "P",
+          "text": "Private scan repair",
+          "top": 326
+        },
+        {
+          "tag": "H1",
+          "text": "Make scanned pages readable.",
+          "top": 356
+        },
+        {
+          "tag": "P",
+          "text": "For readers and researchers with scanned books or archival PDFs. Inspect a page, repair a copy, then extract text on your device.",
+          "top": 546
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Choose a scan ↗",
+          "top": 659
+        },
+        {
+          "tag": "A",
+          "text": "Try it with sample data",
+          "top": 659
+        },
+        {
+          "tag": "P",
+          "text": "Files stay on this device. Use it offline after the app has loaded. Free Markdown export; Local Pro is a $19 one-time searchable-PDF unlock.",
+          "top": 723
+        }
+      ],
+      "url": "https://scan-repair-local.sociobot.in/",
+      "status": 200
+    },
+    "sampleCount": 1,
+    "after": {
+      "url": "https://scan-repair-local.sociobot.in/demo",
+      "banner": 1,
+      "mainText": "SAMPLE DOCUMENT WORKSPACE\n\nField notes · sample page\nAdd pages\nClose document\n\n1 PAGE\n\n01\nrepair\n\nOriginal stays in memory · applied repairs can be undone once\n\nPage 1 inspection\n\nRepair recommended\n\nContrast\n34/255\nSharpness\n6\nSkew estimate\nLevel · low confidence\nRotation preview\nNone\n\nSkew follows detected page lines. Check low-confidence estimates against the page edge.\n\nRepair preview\nContrast\n+18\nApply edge sharpening\n↶ Turn left\nTurn right ↷\nApply reversible repair\nLocal OCR\n\nRecognition runs in this browser or app. It may take a moment the first time language data is prepared.\n\nRun OCR again\n\nHigh confidence · estimated 93%\n\nFlag for manual check\nExport\n\nMarkdown remains free. Searchable PDF is included with Local Pro.\n\nExport Markdown\nExport searchable PDF\nPRO"
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "url": "https://scan-repair-local.sociobot.in/",
+        "type": "document"
+      },
+      {
+        "method": "GET",
+        "url": "https://scan-repair-local.sociobot.in/assets/main-BID4gHAW.js",
+        "type": "script"
+      },
+      {
+        "method": "GET",
+        "url": "https://scan-repair-local.sociobot.in/assets/main-D9r_dgp0.css",
+        "type": "stylesheet"
+      },
+      {
+        "method": "GET",
+        "url": "https://scan-repair-local.sociobot.in/reading-room.webp",
+        "type": "image"
+      },
+      {
+        "method": "GET",
+        "url": "https://scan-repair-local.sociobot.in/demo",
+        "type": "document"
+      },
+      {
+        "method": "GET",
+        "url": "https://scan-repair-local.sociobot.in/assets/main-BID4gHAW.js",
+        "type": "script"
+      },
+      {
+        "method": "GET",
+        "url": "https://scan-repair-local.sociobot.in/assets/main-D9r_dgp0.css",
+        "type": "stylesheet"
+      },
+      {
+        "method": "GET",
+        "url": "https://scan-repair-local.sociobot.in/reading-room.webp",
+        "type": "image"
+      },
+      {
+        "method": "GET",
+        "url": "https://scan-repair-local.sociobot.in/sample-scan.svg",
+        "type": "image"
+      }
+    ],
+    "consoles": [],
+    "errors": []
+  },
+  {
+    "cfg": {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    },
+    "first": {
+      "title": "Scan Repair Local — make scans readable",
+      "lang": "en",
+      "h1": [
+        "Make scanned pages readable."
+      ],
+      "visible": [
+        {
+          "tag": "A",
+          "text": "SR Scan Repair Local home",
+          "top": 16
+        },
+        {
+          "tag": "BUTTON",
+          "text": "◐",
+          "top": 16
+        },
+        {
+          "tag": "P",
+          "text": "Private scan repair",
+          "top": 118
+        },
+        {
+          "tag": "H1",
+          "text": "Make scanned pages readable.",
+          "top": 148
+        },
+        {
+          "tag": "P",
+          "text": "For readers and researchers with scanned books or archival PDFs. Inspect a page, repair a copy, then extract text on your device.",
+          "top": 260
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Choose a scan ↗",
+          "top": 372
+        },
+        {
+          "tag": "A",
+          "text": "Try it with sample data",
+          "top": 372
+        },
+        {
+          "tag": "P",
+          "text": "Files stay on this device. Use it offline after the app has loaded. Free Markdown export; Local Pro is a $19 one-time searchable-PDF unlock.",
+          "top": 460
+        }
+      ],
+      "url": "https://scan-repair-local.sociobot.in/",
+      "status": 200
+    },
+    "sampleCount": 1,
+    "after": {
+      "url": "https://scan-repair-local.sociobot.in/demo",
+      "banner": 1,
+      "mainText": "SAMPLE DOCUMENT WORKSPACE\n\nField notes · sample page\nAdd pages\nClose document\n\n1 PAGE\n\n01\nrepair\n\nOriginal stays in memory · applied repairs can be undone once\n\nPage 1 inspection\n\nRepair recommended\n\nContrast\n34/255\nSharpness\n6\nSkew estimate\nLevel · low confidence\nRotation preview\nNone\n\nSkew follows detected page lines. Check low-confidence estimates against the page edge.\n\nRepair preview\nContrast\n+18\nApply edge sharpening\n↶ Turn left\nTurn right ↷\nApply reversible repair\nLocal OCR\n\nRecognition runs in this browser or app. It may take a moment the first time language data is prepared.\n\nRun OCR again\n\nHigh confidence · estimated 93%\n\nFlag for manual check\nExport\n\nMarkdown remains free. Searchable PDF is included with Local Pro.\n\nExport Markdown\nExport searchable PDF\nPRO"
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "url": "https://scan-repair-local.sociobot.in/",
+        "type": "document"
+      },
+      {
+        "method": "GET",
+        "url": "https://scan-repair-local.sociobot.in/assets/main-BID4gHAW.js",
+        "type": "script"
+      },
+      {
+        "method": "GET",
+        "url": "https://scan-repair-local.sociobot.in/assets/main-D9r_dgp0.css",
+        "type": "stylesheet"
+      },
+      {
+        "method": "GET",
+        "url": "https://scan-repair-local.sociobot.in/reading-room.webp",
+        "type": "image"
+      },
+      {
+        "method": "GET",
+        "url": "https://scan-repair-local.sociobot.in/demo",
+        "type": "document"
+      },
+      {
+        "method": "GET",
+        "url": "https://scan-repair-local.sociobot.in/assets/main-BID4gHAW.js",
+        "type": "script"
+      },
+      {
+        "method": "GET",
+        "url": "https://scan-repair-local.sociobot.in/assets/main-D9r_dgp0.css",
+        "type": "stylesheet"
+      },
+      {
+        "method": "GET",
+        "url": "https://scan-repair-local.sociobot.in/reading-room.webp",
+        "type": "image"
+      },
+      {
+        "method": "GET",
+        "url": "https://scan-repair-local.sociobot.in/sample-scan.svg",
+        "type": "image"
+      }
+    ],
+    "consoles": [],
+    "errors": []
+  }
+]

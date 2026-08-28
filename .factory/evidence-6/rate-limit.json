@@ -1,0 +1,308 @@
+{
+  "summary": {
+    "attempted": 40,
+    "counts": {
+      "200": 30,
+      "429": 10
+    },
+    "first429": {
+      "i": 0,
+      "status": 429,
+      "retryAfter": "4",
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "Too Many Requests! Wait for 4s"
+    },
+    "retryAfterValues": [
+      "4"
+    ],
+    "sample200": {
+      "i": 2,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    }
+  },
+  "responses": [
+    {
+      "i": 0,
+      "status": 429,
+      "retryAfter": "4",
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "Too Many Requests! Wait for 4s"
+    },
+    {
+      "i": 1,
+      "status": 429,
+      "retryAfter": "4",
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "Too Many Requests! Wait for 4s"
+    },
+    {
+      "i": 2,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 3,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 4,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 5,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 6,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 7,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 8,
+      "status": 429,
+      "retryAfter": "4",
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "Too Many Requests! Wait for 4s"
+    },
+    {
+      "i": 9,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 10,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 11,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 12,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 13,
+      "status": 429,
+      "retryAfter": "4",
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "Too Many Requests! Wait for 4s"
+    },
+    {
+      "i": 14,
+      "status": 429,
+      "retryAfter": "4",
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "Too Many Requests! Wait for 4s"
+    },
+    {
+      "i": 15,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 16,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 17,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 18,
+      "status": 429,
+      "retryAfter": "4",
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "Too Many Requests! Wait for 4s"
+    },
+    {
+      "i": 19,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 20,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 21,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 22,
+      "status": 429,
+      "retryAfter": "4",
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "Too Many Requests! Wait for 4s"
+    },
+    {
+      "i": 23,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 24,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 25,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 26,
+      "status": 429,
+      "retryAfter": "4",
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "Too Many Requests! Wait for 4s"
+    },
+    {
+      "i": 27,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 28,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 29,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 30,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 31,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 32,
+      "status": 429,
+      "retryAfter": "4",
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "Too Many Requests! Wait for 4s"
+    },
+    {
+      "i": 33,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 34,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 35,
+      "status": 429,
+      "retryAfter": "4",
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "Too Many Requests! Wait for 4s"
+    },
+    {
+      "i": 36,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 37,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 38,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    },
+    {
+      "i": 39,
+      "status": 200,
+      "retryAfter": null,
+      "cors": "https://scan-repair-local.sociobot.in",
+      "body": "{\"expires_at\":null,\"reason\":\"invalid\",\"valid\":false}"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://scan-repair-local.sociobot.in/",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://scan-repair-local.sociobot.in/demo",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://scan-repair-local.sociobot.in/privacy",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://github.com/B-Divyesh/sf-scan-repair-local/releases",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://api.sociobot.in/api/v1/products/scan-repair-local/checkout",
+    "status": 303,
+    "location": "https://checkout.dodopayments.com/session/cks_0NmOE0FMWUJZwo8VzdnSw"
+  },
+  {
+    "url": "https://scan-repair-local.sociobot.in/terms",
+    "status": 200,
+    "location": null
+  }
+]

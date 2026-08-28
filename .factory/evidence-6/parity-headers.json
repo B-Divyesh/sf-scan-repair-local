@@ -1,0 +1,249 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "bytes": 1623,
+    "liveSha256": "718be2ff6119becc710c6d1307685adc521b63d665f6bef6878f76b642474102",
+    "localSha256": "718be2ff6119becc710c6d1307685adc521b63d665f6bef6878f76b642474102",
+    "match": true,
+    "headers": {
+      "cache-control": "public, must-revalidate, max-age=30",
+      "content-security-policy": "default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+      "content-type": "text/html",
+      "etag": "\"86112891\"",
+      "last-modified": "Fri, 28 Aug 2026 17:38:31 GMT",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "strict-transport-security": "max-age=10886400; includeSubDomains; preload",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "path": "/demo",
+    "status": 200,
+    "bytes": 686,
+    "liveSha256": "0312cb0987fb7557d2e8ba54d10de3013826dc719c59e9bf36d93eacc4d86751",
+    "localSha256": "0312cb0987fb7557d2e8ba54d10de3013826dc719c59e9bf36d93eacc4d86751",
+    "match": true,
+    "headers": {
+      "cache-control": "public, must-revalidate, max-age=30",
+      "content-security-policy": "default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+      "content-type": "text/html",
+      "etag": "\"86112891\"",
+      "last-modified": "Fri, 28 Aug 2026 17:38:31 GMT",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "strict-transport-security": "max-age=10886400; includeSubDomains; preload",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "path": "/asset-manifest.json",
+    "status": 200,
+    "bytes": 2541,
+    "liveSha256": "93e360a230a8a4edafd690ac430bd8b5382c72719cb13f2c4bef337c6567e1f3",
+    "localSha256": "93e360a230a8a4edafd690ac430bd8b5382c72719cb13f2c4bef337c6567e1f3",
+    "match": true,
+    "headers": {
+      "cache-control": "public, must-revalidate, max-age=30",
+      "content-security-policy": "default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+      "content-type": "application/json",
+      "etag": "\"86112891\"",
+      "last-modified": "Fri, 28 Aug 2026 17:38:31 GMT",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "strict-transport-security": "max-age=10886400; includeSubDomains; preload",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "path": "/sw.js",
+    "status": 200,
+    "bytes": 2278,
+    "liveSha256": "fc354b71a1c66a9a047a5654f15dcba1655258297aef62d459a4e7680bbf0afa",
+    "localSha256": "fc354b71a1c66a9a047a5654f15dcba1655258297aef62d459a4e7680bbf0afa",
+    "match": true,
+    "headers": {
+      "cache-control": "public, must-revalidate, max-age=30",
+      "content-security-policy": "default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+      "content-type": "text/javascript",
+      "etag": "\"86112891\"",
+      "last-modified": "Fri, 28 Aug 2026 17:38:31 GMT",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "strict-transport-security": "max-age=10886400; includeSubDomains; preload",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "path": "/reading-room.webp",
+    "status": 200,
+    "bytes": 235916,
+    "liveSha256": "d971cce2ad64caa88ca4368be8082bd0d2212acf21da2279ece579ed39918877",
+    "localSha256": "d971cce2ad64caa88ca4368be8082bd0d2212acf21da2279ece579ed39918877",
+    "match": true,
+    "headers": {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-security-policy": "default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+      "content-type": "image/webp",
+      "etag": "\"86112891\"",
+      "last-modified": "Fri, 28 Aug 2026 17:38:31 GMT",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "strict-transport-security": "max-age=10886400; includeSubDomains; preload",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "path": "/privacy/",
+    "status": 200,
+    "bytes": 1183,
+    "liveSha256": "ff020e4817dd968cfe0da0612de78842ca4c576d444e10a7b0bfc88d2b2de3ce",
+    "localSha256": "ff020e4817dd968cfe0da0612de78842ca4c576d444e10a7b0bfc88d2b2de3ce",
+    "match": true,
+    "headers": {
+      "cache-control": "public, must-revalidate, max-age=30",
+      "content-security-policy": "default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+      "content-type": "text/html",
+      "etag": "\"86112891\"",
+      "last-modified": "Fri, 28 Aug 2026 17:38:31 GMT",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "strict-transport-security": "max-age=10886400; includeSubDomains; preload",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "path": "/terms/",
+    "status": 200,
+    "bytes": 1279,
+    "liveSha256": "b5fad57029c4737af87522d11f23730ed2f5f9bddcb8da319d7887921308f0a8",
+    "localSha256": "b5fad57029c4737af87522d11f23730ed2f5f9bddcb8da319d7887921308f0a8",
+    "match": true,
+    "headers": {
+      "cache-control": "public, must-revalidate, max-age=30",
+      "content-security-policy": "default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+      "content-type": "text/html",
+      "etag": "\"86112891\"",
+      "last-modified": "Fri, 28 Aug 2026 17:38:31 GMT",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "strict-transport-security": "max-age=10886400; includeSubDomains; preload",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "path": "/robots.txt",
+    "status": 200,
+    "bytes": 82,
+    "liveSha256": "d80d5ee96783c0d06235e63d5f95fbb98c7023461fc80c70c6179a1b50e436d1",
+    "localSha256": "d80d5ee96783c0d06235e63d5f95fbb98c7023461fc80c70c6179a1b50e436d1",
+    "match": true,
+    "headers": {
+      "cache-control": "public, must-revalidate, max-age=30",
+      "content-security-policy": "default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+      "content-type": "text/plain",
+      "etag": "\"86112891\"",
+      "last-modified": "Fri, 28 Aug 2026 17:38:31 GMT",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "strict-transport-security": "max-age=10886400; includeSubDomains; preload",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "path": "/sitemap.xml",
+    "status": 200,
+    "bytes": 364,
+    "liveSha256": "660dcaea201c476c5ca40bbda027f71436bd98c339583dafc22e40721d25a9a9",
+    "localSha256": "660dcaea201c476c5ca40bbda027f71436bd98c339583dafc22e40721d25a9a9",
+    "match": true,
+    "headers": {
+      "cache-control": "public, must-revalidate, max-age=30",
+      "content-security-policy": "default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+      "content-type": "text/xml",
+      "etag": "\"86112891\"",
+      "last-modified": "Fri, 28 Aug 2026 17:38:31 GMT",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "strict-transport-security": "max-age=10886400; includeSubDomains; preload",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "path": "/manifest.webmanifest",
+    "status": 200,
+    "bytes": 218,
+    "liveSha256": "ca5a610b28149538024ba07ab22df2b5aac943a3709a7c12686d279ea135808d",
+    "localSha256": "ca5a610b28149538024ba07ab22df2b5aac943a3709a7c12686d279ea135808d",
+    "match": true,
+    "headers": {
+      "cache-control": "public, must-revalidate, max-age=30",
+      "content-security-policy": "default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+      "content-type": "application/octet-stream",
+      "etag": "\"86112891\"",
+      "last-modified": "Fri, 28 Aug 2026 17:38:31 GMT",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "strict-transport-security": "max-age=10886400; includeSubDomains; preload",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "path": "/install.sh",
+    "status": 200,
+    "bytes": 1206,
+    "liveSha256": "b966c82a2a539225747f36868ca26625d7e2f6c2b4fbaa0b63e83519ec79a780",
+    "localSha256": "b966c82a2a539225747f36868ca26625d7e2f6c2b4fbaa0b63e83519ec79a780",
+    "match": true,
+    "headers": {
+      "cache-control": "public, must-revalidate, max-age=30",
+      "content-security-policy": "default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+      "content-type": "application/x-sh",
+      "etag": "\"86112891\"",
+      "last-modified": "Fri, 28 Aug 2026 17:38:31 GMT",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "strict-transport-security": "max-age=10886400; includeSubDomains; preload",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "path": "/install.ps1",
+    "status": 200,
+    "bytes": 857,
+    "liveSha256": "d3eee1040cd6fe0f403e242962c8fa4a0f7202dcefcbb93e5d2d347a6c39dae4",
+    "localSha256": "d3eee1040cd6fe0f403e242962c8fa4a0f7202dcefcbb93e5d2d347a6c39dae4",
+    "match": true,
+    "headers": {
+      "cache-control": "public, must-revalidate, max-age=30",
+      "content-security-policy": "default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+      "content-type": "application/octet-stream",
+      "etag": "\"86112891\"",
+      "last-modified": "Fri, 28 Aug 2026 17:38:31 GMT",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "strict-transport-security": "max-age=10886400; includeSubDomains; preload",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "path": "/no-such-route",
+    "status": 404,
+    "bytes": 402,
+    "liveSha256": "ebd26eb9a8cbb748d5b6d071d9040daffe16f3dbc63c94f05155d4578ec9d08c",
+    "localSha256": null,
+    "match": null,
+    "headers": {
+      "cache-control": "public, must-revalidate, max-age=30",
+      "content-security-policy": "default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+      "content-type": "text/html",
+      "etag": "\"86112891\"",
+      "last-modified": "Fri, 28 Aug 2026 17:38:31 GMT",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "strict-transport-security": "max-age=10886400; includeSubDomains; preload",
+      "x-content-type-options": "nosniff"
+    }
+  }
+]

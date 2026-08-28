@@ -1,0 +1,17 @@
+{
+  "files": 34,
+  "mismatches": [
+    {
+      "rel": "/ocr/eng.traineddata.gz",
+      "status": 200,
+      "local": "45b4cb346724ac1774f1c36f42f182b887bcdb28ebe63e6fff90ac41f3fcff91",
+      "live": "5dc5d8d640a212c9d6184921ba103b186f50e0fed9ee716c53e6b312b400d747"
+    },
+    {
+      "rel": "/staticwebapp.config.json",
+      "status": 404,
+      "local": "d1550f0f76354ff0b9ff4cfdaa9d2ad24251f7d6723d1797a064548ed949dd2c",
+      "live": "ebd26eb9a8cbb748d5b6d071d9040daffe16f3dbc63c94f05155d4578ec9d08c"
+    }
+  ]
+}

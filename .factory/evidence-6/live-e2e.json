@@ -1,0 +1,43 @@
+{
+  "normal": {
+    "diag": "Page 1 inspection\n\nRepair recommended\n\nContrast\n41/255\nSharpness\n7\nSkew estimate\nLevel · low confidence\nRotation preview\nNone\n\nSkew follows detected page lines. Check low-confidence estimates against the page edge.",
+    "rotation": "matrix(0.990281, 0.139079, -0.139079, 0.990281, 0, 0)",
+    "repairedChanged": true,
+    "undoExact": true,
+    "ocr": "ARCHIVE TEST PAGE\nRiver road repairs recorded in 1912.\nShelf B-14 — checked locally.\n",
+    "download": "scan-repair-local.md",
+    "markdown": "## Page 1\n\n<!-- OCR confidence: 94% — verify against original -->\n\nARCHIVE TEST PAGE\nRiver road repairs recorded in 1912.\nShelf B-14 — checked locally.\n",
+    "requests": [
+      "https://scan-repair-local.sociobot.in/",
+      "https://scan-repair-local.sociobot.in/assets/main-BID4gHAW.js",
+      "https://scan-repair-local.sociobot.in/assets/main-D9r_dgp0.css",
+      "https://scan-repair-local.sociobot.in/reading-room.webp",
+      "https://scan-repair-local.sociobot.in/assets/index-DdBV6pZW.js",
+      "https://scan-repair-local.sociobot.in/assets/_commonjsHelpers-Cpj98o6Y.js",
+      "blob:https://scan-repair-local.sociobot.in/92991de8-a234-46c9-9f80-23e4c9ac9a8a",
+      "https://scan-repair-local.sociobot.in/ocr/worker.min.js",
+      "https://scan-repair-local.sociobot.in/ocr/tesseract-core-simd-lstm.wasm.js",
+      "https://scan-repair-local.sociobot.in/ocr/eng.traineddata.gz"
+    ],
+    "externalDocumentRequests": [],
+    "consoles": [],
+    "errors": []
+  },
+  "pdf": {
+    "pageCount": 2,
+    "headings": [
+      "two-page.pdf · 1",
+      "two-page.pdf · 2"
+    ],
+    "markdownHasPage1": true,
+    "markdownHasPage2": true,
+    "markdown": "## Page 1\n\n<!-- OCR confidence: 95% — verify against original -->\n\nArchive volume page\none\nFirst page text for local repair review.\n\n---\n\n## Page 2\n\n<!-- OCR confidence: 95% — verify against original -->\n\nArchive volume page\ntwo\n\nSecond page text for local repair\nreview.\n",
+    "consoles": [],
+    "errors": []
+  },
+  "invalid": {
+    "alertText": "Could not open this file. Unsupported image",
+    "recovered": true,
+    "onePixelOpened": true
+  }
+}

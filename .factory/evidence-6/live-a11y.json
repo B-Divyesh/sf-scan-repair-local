@@ -1,0 +1,184 @@
+{
+  "desktop": {
+    "semantics": {
+      "lang": "en",
+      "title": "Scan Repair Local — make scans readable",
+      "h1": 1,
+      "main": 1,
+      "images": [
+        {
+          "src": "https://scan-repair-local.sociobot.in/reading-room.webp",
+          "alt": "Halftone illustration of an archival book, magnifier and page-repair tools on a worktable."
+        }
+      ],
+      "unlabelledButtons": 0,
+      "headings": [
+        "H1:Make scanned pages readable.",
+        "H2:Four stops between scan and search.",
+        "H2:Keep the workbench close to your files.",
+        "H3:Already have a license?"
+      ]
+    },
+    "axe": [
+      {
+        "label": "landing-light",
+        "seriousCritical": [],
+        "all": []
+      },
+      {
+        "label": "demo-light",
+        "seriousCritical": [],
+        "all": []
+      },
+      {
+        "label": "demo-dark",
+        "seriousCritical": [],
+        "all": []
+      }
+    ]
+  },
+  "mobile": {
+    "sequence": [
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Skip to document workspace",
+        "rect": {
+          "x": 8,
+          "y": 8,
+          "w": 270.453125,
+          "h": 44
+        },
+        "outline": "3px solid rgb(0, 95, 204)"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "SR Scan Repair Local home",
+        "rect": {
+          "x": 16,
+          "y": 15.5,
+          "w": 185.34375,
+          "h": 44
+        },
+        "outline": "0px solid rgb(23, 38, 31)"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "theme",
+        "text": "◐",
+        "rect": {
+          "x": 330,
+          "y": 15.5,
+          "w": 44,
+          "h": 44
+        },
+        "outline": "0px solid rgb(23, 38, 31)"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "open-file",
+        "text": "Choose a scan ↗",
+        "rect": {
+          "x": 16,
+          "y": 372.34375,
+          "w": 171,
+          "h": 72
+        },
+        "outline": "0px solid rgb(255, 255, 255)"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Try it with sample data",
+        "rect": {
+          "x": 203,
+          "y": 372.34375,
+          "w": 171,
+          "h": 72
+        },
+        "outline": "0px solid rgb(23, 38, 31)"
+      },
+      {
+        "tag": "A",
+        "id": "download-link",
+        "text": "Downloads are being published",
+        "rect": {
+          "x": 16,
+          "y": 398.1875,
+          "w": 311.359375,
+          "h": 48
+        },
+        "outline": "0px solid rgb(255, 255, 255)"
+      },
+      {
+        "tag": "INPUT",
+        "id": "license",
+        "text": "",
+        "rect": {
+          "x": 42,
+          "y": 661.5625,
+          "w": 206.5625,
+          "h": 48
+        },
+        "outline": "3px solid rgb(0, 95, 204)"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "restore",
+        "text": "Restore",
+        "rect": {
+          "x": 248.5625,
+          "y": 661.5625,
+          "w": 99.4375,
+          "h": 48
+        },
+        "outline": "0px solid rgb(23, 38, 31)"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Buy Local Pro · $19 once",
+        "rect": {
+          "x": 42,
+          "y": 773.46875,
+          "w": 196.421875,
+          "h": 44
+        },
+        "outline": "0px solid rgb(23, 38, 31)"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Privacy",
+        "rect": {
+          "x": 16,
+          "y": 733.9375,
+          "w": 51.234375,
+          "h": 44
+        },
+        "outline": "0px solid rgb(82, 96, 87)"
+      }
+    ],
+    "enteredDemo": "https://scan-repair-local.sociobot.in/demo",
+    "reducedTransition": "1e-05s",
+    "undersizedTargets": [
+      {
+        "tag": "INPUT",
+        "id": "add-input",
+        "text": "Add scanned pages or a PDF",
+        "w": 1,
+        "h": 1
+      }
+    ],
+    "afterAdd": {
+      "id": "close",
+      "text": "Close document"
+    },
+    "zoom": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "bodyScrollWidth": 390
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "initial": {
+    "controller": "https://scan-repair-local.sociobot.in/sw.js",
+    "active": "https://scan-repair-local.sociobot.in/sw.js",
+    "keys": [
+      "scan-repair-local-v7"
+    ],
+    "entries": [
+      "https://scan-repair-local.sociobot.in/",
+      "https://scan-repair-local.sociobot.in/demo",
+      "https://scan-repair-local.sociobot.in/reading-room.webp",
+      "https://scan-repair-local.sociobot.in/sample-scan.svg",
+      "https://scan-repair-local.sociobot.in/manifest.webmanifest",
+      "https://scan-repair-local.sociobot.in/favicon.svg",
+      "https://scan-repair-local.sociobot.in/ocr/worker.min.js",
+      "https://scan-repair-local.sociobot.in/ocr/eng.traineddata.gz",
+      "https://scan-repair-local.sociobot.in/ocr/tesseract-core-simd-lstm.wasm",
+      "https://scan-repair-local.sociobot.in/assets/main-BID4gHAW.js",
+      "https://scan-repair-local.sociobot.in/assets/main-D9r_dgp0.css",
+      "https://scan-repair-local.sociobot.in/assets/purify.es-4eNOHKSq.js",
+      "https://scan-repair-local.sociobot.in/assets/index.es-B5vQkGlF.js",
+      "https://scan-repair-local.sociobot.in/assets/html2canvas.esm-DXEQVQnt.js",
+      "https://scan-repair-local.sociobot.in/ocr/tesseract-core-simd-lstm.wasm.js",
+      "https://scan-repair-local.sociobot.in/assets/pdf.worker.min-CHFwMXne.mjs",
+      "https://scan-repair-local.sociobot.in/assets/_commonjsHelpers-Cpj98o6Y.js",
+      "https://scan-repair-local.sociobot.in/assets/index-DdBV6pZW.js",
+      "https://scan-repair-local.sociobot.in/assets/pdf.worker.min-CevBI0zc.js",
+      "https://scan-repair-local.sociobot.in/assets/pdf-BRz36HYW.js",
+      "https://scan-repair-local.sociobot.in/assets/jspdf.es.min-lFN6vj0C.js"
+    ]
+  },
+  "offline": {
+    "url": "https://scan-repair-local.sociobot.in/demo",
+    "text": "FIELD NOTES — RIVER ROAD\nArchive shelf B-14 - 14 October 1912 O\nThe river road was repaired after the spring flood.\nStone was set along the low bend near the mill.\nCompare the pencilled date with the original page.\nee ——\n\nReader note: marginal mark may read “approved”.\n-\n",
+    "consoles": [],
+    "errors": [],
+    "failed": []
+  }
+}
