@@ -67,11 +67,15 @@ jobs:
       - name: Create checksums and manifest
         run: |
           cd release
-          find . -type f -not -name SHA256SUMS -not -name latest.json -print0 | while IFS= read -r -d '' file; do sha256sum "$file" | sed "s#  .*#  $(basename "$file")#"; done > SHA256SUMS
+          find . -type f -not -name SHA256SUMS -not -name latest.json -print0 | while IFS= read -r -d '' file; do
+            hash=$(sha256sum "$file" | awk '{print $1}')
+            printf '%s  %s\n' "$hash" "$(basename "$file")"
+          done > SHA256SUMS
           tag="${GITHUB_REF_NAME:-v0.1.0}"
-          mac=$(find . -type f -iname '*.dmg' | head -1 | xargs -r basename)
-          win=$(find . -type f \( -iname '*.exe' -o -iname '*.msi' \) | head -1 | xargs -r basename)
-          linux=$(find . -type f -iname '*.AppImage' | head -1 | xargs -r basename)
+          mac=$(find . -type f -iname '*.dmg' -print -quit | sed 's#^.*/##')
+          win=$(find . -type f \( -iname '*.exe' -o -iname '*.msi' \) -print -quit | sed 's#^.*/##')
+          linux=$(find . -type f -iname '*.AppImage' -print -quit | sed 's#^.*/##')
+          test -n "$mac" && test -n "$win" && test -n "$linux"
           jq -n --arg v "${tag#v}" --arg repo "$GITHUB_REPOSITORY" --arg tag "$tag" --arg mac "$mac" --arg win "$win" --arg linux "$linux" '{version:$v,platforms:{macos:{url:("https://github.com/"+$repo+"/releases/download/"+$tag+"/"+$mac),format:"DMG"},windows:{url:("https://github.com/"+$repo+"/releases/download/"+$tag+"/"+$win),format:"installer"},linux:{url:("https://github.com/"+$repo+"/releases/download/"+$tag+"/"+$linux),format:"AppImage"}}}' > latest.json
       - uses: softprops/action-gh-release@v2
         with:
