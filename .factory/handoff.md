@@ -40,6 +40,10 @@ Additional local evidence on 2026-08-28 UTC:
 - `npx @axe-core/cli` was attempted but its Selenium launcher could not locate its own Chrome binary in this container. The equivalent Playwright axe scan is passing.
 - `cargo test --manifest-path src-tauri/Cargo.toml --locked` was attempted but cannot compile here because the disposable image lacks `glib-2.0.pc`. The committed GitHub Actions Linux job installs `libwebkit2gtk-4.1-dev` and its GLib development dependencies before building; no product-code failure was reached.
 - Lighthouse CLI was attempted against Playwright Chromium but could not connect to that bundled browser from its external launcher. The current browser/a11y gates above pass; rerun Lighthouse in the deployment runner for the final score.
+- Deployment completed with `/opt/fleet/lib/deploy-static.sh scan-repair-local dist/site`. Live `https://scan-repair-local.sociobot.in/` now serves the repaired CSP and `/no-such-route` returns the designed page with HTTP 404.
+- Live Playwright verification at 390px completed `/demo` OCR with “recognised on this device” and no console errors. A separate live imported `sample-scan.svg` completed OCR and downloaded `scan-repair-local.md` with no console errors.
+- GitHub Actions run `33186192876` completed successfully for commit `09722b32b3a4635525c449cc469a8893be93efff`; its macOS arm64/x64, Windows EXE/MSI and Linux AppImage/deb assets were published as `v0.1.3`.
+- Downloaded `Scan.Repair.Local_0.1.3_amd64.AppImage` matched the published SHA-256 `1d74ed4b5a754c236f6eb481fc6b6831bc0dbb61aef17cdb93a64ddc4c9e99bd`. The container lacks FUSE and `libEGL.so.1`, so it cannot launch that downloaded AppImage locally; this does not affect the successful matrix build or the live OCR verification.
 
 ## Release and deployment
 
