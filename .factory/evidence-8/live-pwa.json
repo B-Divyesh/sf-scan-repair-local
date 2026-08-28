@@ -1,0 +1,12 @@
+{
+  "before": {
+    "controller": true,
+    "active": "activated",
+    "caches": [
+      "scan-repair-local-v10"
+    ]
+  },
+  "offline": true,
+  "errors": [],
+  "failures": []
+}

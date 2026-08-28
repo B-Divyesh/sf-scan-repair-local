@@ -1,0 +1,112 @@
+PATH /
+HTTP/2 200 
+content-type: text/html
+date: Fri, 28 Aug 2026 21:14:13 GMT
+cache-control: public, must-revalidate, max-age=30
+etag: "08064561"
+last-modified: Fri, 28 Aug 2026 20:43:44 GMT
+content-length: 1770
+strict-transport-security: max-age=10886400; includeSubDomains; preload
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+x-dns-prefetch-control: off
+permissions-policy: camera=(), microphone=(), geolocation=(), payment=()
+content-security-policy: default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
+
+PATH /demo
+HTTP/2 200 
+content-type: text/html
+date: Fri, 28 Aug 2026 21:14:13 GMT
+cache-control: public, must-revalidate, max-age=30
+etag: "08064561"
+last-modified: Fri, 28 Aug 2026 20:43:44 GMT
+content-length: 686
+strict-transport-security: max-age=10886400; includeSubDomains; preload
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+x-dns-prefetch-control: off
+permissions-policy: camera=(), microphone=(), geolocation=(), payment=()
+content-security-policy: default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
+
+PATH /privacy
+HTTP/2 200 
+content-type: text/html
+date: Fri, 28 Aug 2026 21:14:13 GMT
+cache-control: public, must-revalidate, max-age=30
+etag: "08064561"
+last-modified: Fri, 28 Aug 2026 20:43:44 GMT
+content-length: 1360
+strict-transport-security: max-age=10886400; includeSubDomains; preload
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+x-dns-prefetch-control: off
+permissions-policy: camera=(), microphone=(), geolocation=(), payment=()
+content-security-policy: default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
+
+PATH /terms
+HTTP/2 200 
+content-type: text/html
+date: Fri, 28 Aug 2026 21:14:14 GMT
+cache-control: public, must-revalidate, max-age=30
+etag: "08064561"
+last-modified: Fri, 28 Aug 2026 20:43:44 GMT
+content-length: 1423
+strict-transport-security: max-age=10886400; includeSubDomains; preload
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+x-dns-prefetch-control: off
+permissions-policy: camera=(), microphone=(), geolocation=(), payment=()
+content-security-policy: default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
+
+PATH /assets/main-vawUW5wh.js
+HTTP/2 200 
+content-type: text/javascript
+date: Fri, 28 Aug 2026 21:14:14 GMT
+cache-control: public, max-age=31536000, immutable
+etag: "08064561"
+last-modified: Fri, 28 Aug 2026 20:43:44 GMT
+content-length: 25170
+strict-transport-security: max-age=10886400; includeSubDomains; preload
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+x-dns-prefetch-control: off
+permissions-policy: camera=(), microphone=(), geolocation=(), payment=()
+content-security-policy: default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
+
+PATH /reading-room.webp
+HTTP/2 200 
+content-type: image/webp
+date: Fri, 28 Aug 2026 21:14:14 GMT
+cache-control: public, max-age=31536000, immutable
+etag: "08064561"
+last-modified: Fri, 28 Aug 2026 20:43:44 GMT
+content-length: 235916
+strict-transport-security: max-age=10886400; includeSubDomains; preload
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+x-dns-prefetch-control: off
+permissions-policy: camera=(), microphone=(), geolocation=(), payment=()
+content-security-policy: default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
+
+PATH /no-such-route
+HTTP/2 404 
+content-type: text/html
+date: Fri, 28 Aug 2026 21:14:16 GMT
+cache-control: public, must-revalidate, max-age=30
+etag: "08064561"
+last-modified: Fri, 28 Aug 2026 20:43:44 GMT
+content-length: 1026
+strict-transport-security: max-age=10886400; includeSubDomains; preload
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+x-dns-prefetch-control: off
+permissions-policy: camera=(), microphone=(), geolocation=(), payment=()
+content-security-policy: default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
+

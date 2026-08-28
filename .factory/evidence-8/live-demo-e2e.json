@@ -1,0 +1,43 @@
+{
+  "changed": true,
+  "restored": true,
+  "flagged": true,
+  "markdown": {
+    "name": "scan-repair-local.md",
+    "hasPageReference": true,
+    "hasConfidenceLabel": true
+  },
+  "ocr": {
+    "textLength": 272,
+    "result": "High confidence · estimated 89% · recognised on this device"
+  },
+  "requests": [
+    "https://scan-repair-local.sociobot.in/demo",
+    "https://scan-repair-local.sociobot.in/assets/main-vawUW5wh.js",
+    "https://scan-repair-local.sociobot.in/assets/main-CBuDGCZG.css",
+    "https://scan-repair-local.sociobot.in/reading-room.webp",
+    "https://scan-repair-local.sociobot.in/sample-scan.svg",
+    "https://scan-repair-local.sociobot.in/sample-scan.svg",
+    "https://scan-repair-local.sociobot.in/sample-scan.svg",
+    "https://scan-repair-local.sociobot.in/assets/index-DdBV6pZW.js",
+    "https://scan-repair-local.sociobot.in/assets/_commonjsHelpers-Cpj98o6Y.js",
+    "blob:https://scan-repair-local.sociobot.in/b5d79043-237b-4a3b-9acb-01767497c587",
+    "https://scan-repair-local.sociobot.in/ocr/worker.min.js",
+    "https://scan-repair-local.sociobot.in/ocr/tesseract-core-simd-lstm.wasm.js",
+    "https://scan-repair-local.sociobot.in/ocr/eng.traineddata.gz"
+  ],
+  "thirdParty": [],
+  "errors": [],
+  "serviceWorker": {
+    "controller": true,
+    "state": "activated",
+    "caches": [
+      "scan-repair-local-v10"
+    ],
+    "demoCached": true,
+    "storage": {
+      "local": [],
+      "session": []
+    }
+  }
+}

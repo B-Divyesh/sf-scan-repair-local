@@ -1,0 +1,1 @@
+/tmp/squashfs-root/usr/share/applications/Scan Repair Local.desktop:7:Name=Scan Repair Local

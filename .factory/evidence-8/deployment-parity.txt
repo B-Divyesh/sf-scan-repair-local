@@ -1,0 +1,9 @@
+index.html	6ce87173f9b08aa45e5832bdf55d2031544ba369a0ffc76b877696752295cf20	MATCH
+demo/index.html	904d05db03f3aa98593a984851ebbc1f18237e3963ac91727e7bf1db5cb020f8	MATCH
+assets/main-vawUW5wh.js	2ae3a3dd82b453eb9beafbffdca36e277c8b6caf119c6a9e111c81301d0cba3e	MATCH
+assets/main-CBuDGCZG.css	1ae4470e4d3e2de434ae7bc48b0737ccbc376c2daf0f35302cca1a54dba41c02	MATCH
+sw.js	ac16cb83d400e44fa68e6ee5a7c3da344d818fb08d030223405e5125070ec323	MATCH
+asset-manifest.json	46c4e6d0aab308bb4490b9bd0fcce0d34ad148d40c4b0ca84bfb528def119c0f	MATCH
+
+Candidate delta from tagged desktop source:
+M	.factory/handoff.md
