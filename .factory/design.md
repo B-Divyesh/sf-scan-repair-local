@@ -28,4 +28,6 @@ One original illustration supports the download section: a close-up archival pag
 
 The four walkthrough frames are captured from the shipped sample workspace at 1280×800 and downscaled to 960×600 WebP. They document the real open, inspect, repair and export states; they are not generated imagery. `public/apple-touch-icon.png` is a 180×180 raster derivative of the product's own desktop application icon.
 
+`public/reading-room-600.webp` is a 600×400 responsive derivative of the reviewed landing illustration, exported locally with ImageMagick at WebP quality 78 for mobile delivery.
+
 Prompt sheet: `dithered archival print repair workbench, warm ivory paper, deep forest green and muted oxide red ink, tactile halftone dots, paper fibre and scanner glass, editorial still life, slightly top-down, honest utility, no text, no logos, no watermark, no people, no brand symbols`. Negative list: polished SaaS gradients, neon, fake UI text, hands, logos, watermarks.

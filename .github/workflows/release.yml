@@ -62,6 +62,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
       - uses: actions/download-artifact@v4
         with: { path: release }
       - name: Create checksums and manifest
@@ -86,9 +88,14 @@ jobs:
           win=$(find . -type f \( -iname '*.exe' -o -iname '*.msi' \) -print -quit | sed 's#^.*/##')
           linux=$(find . -type f -iname '*.AppImage' -print -quit | sed 's#^.*/##')
           test -n "$mac" && test -n "$win" && test -n "$linux"
-          jq -n --arg v "${tag#v}" --arg repo "$GITHUB_REPOSITORY" --arg tag "$tag" --arg mac "$mac" --arg win "$win" --arg linux "$linux" '{version:$v,platforms:{macos:{url:("https://github.com/"+$repo+"/releases/download/"+$tag+"/"+$mac),format:"DMG"},windows:{url:("https://github.com/"+$repo+"/releases/download/"+$tag+"/"+$win),format:"installer"},linux:{url:("https://github.com/"+$repo+"/releases/download/"+$tag+"/"+$linux),format:"AppImage"}}}' > latest.json
-      - uses: softprops/action-gh-release@v2
+          jq -n --arg v "${tag#v}" --arg repo "$GITHUB_REPOSITORY" --arg tag "$tag" --arg sha "$GITHUB_SHA" --arg mac "$mac" --arg win "$win" --arg linux "$linux" '{version:$v,tag:$tag,source_sha:$sha,platforms:{macos:{url:("https://github.com/"+$repo+"/releases/download/"+$tag+"/"+$mac),format:"DMG"},windows:{url:("https://github.com/"+$repo+"/releases/download/"+$tag+"/"+$win),format:"installer"},linux:{url:("https://github.com/"+$repo+"/releases/download/"+$tag+"/"+$linux),format:"AppImage"}}}' > latest.json
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
         with:
           generate_release_notes: true
           files: |
             release/**
+      - name: Verify published source identity and downloads
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/verify-release.mjs --repo="$GITHUB_REPOSITORY" --tag="$GITHUB_REF_NAME" --sha="$GITHUB_SHA"

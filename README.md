@@ -25,6 +25,7 @@ Document pages and recognised text remain in browser/app memory while the worksp
 Local Pro is a $19 one-time license for searchable-PDF export. The checkout and license verification use Sociobot/Dodo. Markdown export remains free.
 
 Tag a `v*` version to run the GitHub Actions desktop matrix. It builds unsigned macOS DMGs (arm64 and x64), Windows installers, and Linux AppImage/deb artifacts.
+The release job records the tagged source SHA in `latest.json`, then downloads and checksum-verifies one installer for each platform before it succeeds.
 
 ## Documentation
 
