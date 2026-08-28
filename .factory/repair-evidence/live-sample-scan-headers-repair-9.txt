@@ -1,0 +1,16 @@
+HTTP/2 200 
+content-type: image/svg+xml
+date: Fri, 28 Aug 2026 23:14:55 GMT
+accept-ranges: bytes
+cache-control: public, max-age=31536000, immutable
+etag: "98597505"
+last-modified: Fri, 28 Aug 2026 23:12:31 GMT
+content-length: 1180
+strict-transport-security: max-age=10886400; includeSubDomains; preload
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+x-dns-prefetch-control: off
+permissions-policy: camera=(), microphone=(), geolocation=(), payment=()
+content-security-policy: default-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://api.github.com https://api.sociobot.in; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
+

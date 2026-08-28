@@ -1,0 +1,29 @@
+{
+  "url": "https://scan-repair-local.sociobot.in/demo",
+  "runs": [
+    {
+      "run": 1,
+      "performance": 100,
+      "fcp": 1520,
+      "lcp": 1520,
+      "tbt": 0,
+      "cls": 0
+    },
+    {
+      "run": 2,
+      "performance": 100,
+      "fcp": 1504,
+      "lcp": 1504,
+      "tbt": 0,
+      "cls": 0
+    },
+    {
+      "run": 3,
+      "performance": 100,
+      "fcp": 1440,
+      "lcp": 1440,
+      "tbt": 0,
+      "cls": 0
+    }
+  ]
+}

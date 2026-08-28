@@ -1,0 +1,24 @@
+{
+  "tag": "v0.1.8",
+  "source_sha": "c9b713921df92168e036c6839aa18fe69fbd8f89",
+  "artifacts": [
+    {
+      "platform": "macos",
+      "file": "Scan.Repair.Local_0.1.8_aarch64.dmg",
+      "url": "https://github.com/B-Divyesh/sf-scan-repair-local/releases/download/v0.1.8/Scan.Repair.Local_0.1.8_aarch64.dmg",
+      "sha256": "99f4f1e122cd7da0b089bb8a4ce13315397a4107633d6202bc59cdaf3b87ff93"
+    },
+    {
+      "platform": "windows",
+      "file": "Scan.Repair.Local_0.1.8_x64-setup.exe",
+      "url": "https://github.com/B-Divyesh/sf-scan-repair-local/releases/download/v0.1.8/Scan.Repair.Local_0.1.8_x64-setup.exe",
+      "sha256": "c347f7141a4b622fdaf19fb891e21dfd88fa4b294ca24eb0e90187953919fadb"
+    },
+    {
+      "platform": "linux",
+      "file": "Scan.Repair.Local_0.1.8_amd64.AppImage",
+      "url": "https://github.com/B-Divyesh/sf-scan-repair-local/releases/download/v0.1.8/Scan.Repair.Local_0.1.8_amd64.AppImage",
+      "sha256": "b692cbecf77f198696bfa91e0a8b931787487b422342c39e4d9d8e628fd32c13"
+    }
+  ]
+}

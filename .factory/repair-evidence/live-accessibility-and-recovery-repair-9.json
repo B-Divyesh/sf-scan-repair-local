@@ -1,0 +1,40 @@
+{
+  "landing": {
+    "axe": [],
+    "skipVisible": true,
+    "skipFocusedMain": true,
+    "focus": {
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(0, 95, 204)"
+    },
+    "errors": []
+  },
+  "recovery": {
+    "invalidMessage": "Could not open this file. Unsupported image",
+    "normalImport": {
+      "pages": 2,
+      "heading": "second.png"
+    }
+  },
+  "demo": {
+    "axeLight": [],
+    "axeDark": []
+  },
+  "mobile": {
+    "scrollWidth": 390,
+    "viewportWidth": 390,
+    "primarySize": {
+      "width": 252.84375,
+      "height": 48
+    },
+    "resetSize": {
+      "width": 102.359375,
+      "height": 44
+    }
+  },
+  "reducedMotion": {
+    "transitionDuration": "1e-05s",
+    "animationDuration": "1e-05s"
+  }
+}
