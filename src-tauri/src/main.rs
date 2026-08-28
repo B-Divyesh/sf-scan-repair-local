@@ -1,1 +1,5 @@
-fn main() { scan_repair_local_lib::run(); }
+fn main() {
+    tauri::Builder::default()
+        .run(tauri::generate_context!())
+        .expect("error while running Scan Repair Local");
+}

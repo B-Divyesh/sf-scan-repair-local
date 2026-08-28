@@ -1,6 +1,6 @@
 {
   "name": "scan-repair-local",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,14 +10,17 @@
     "build:site": "npm run prepare:ocr && vite build --outDir dist/site",
     "tauri": "tauri",
     "test": "vitest run",
+    "test:claims": "playwright test",
+    "test:browser": "playwright test",
+    "lint": "tsc --noEmit",
     "test:watch": "vitest",
     "preview": "vite preview --outDir dist/site",
     "postinstall": "npm run prepare:ocr"
   },
   "dependencies": {
     "@tesseract.js-data/eng": "^1.0.0",
-    "jspdf": "^3.0.1",
-    "pdfjs-dist": "^5.4.149",
+    "jspdf": "4.2.1",
+    "pdfjs-dist": "6.2.108",
     "tesseract.js": "^6.0.1"
   },
   "devDependencies": {

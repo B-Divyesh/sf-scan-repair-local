@@ -1,31 +1,35 @@
 # Scan Repair Local
 
-Live: https://scan-repair-local.sociobot.in — built by the Param Factory (`desktop-app`).
+Scan Repair Local helps readers and researchers make scanned books and archival PDFs readable without sending page data to a service.
 
-Scan Repair Local is a local-first desktop utility for readers and researchers working with difficult scanned books and archival PDFs. It diagnoses blur/contrast/skew, previews reversible pixel repairs, runs OCR locally, highlights uncertainty and exports Markdown with page references. Local Pro is a one-time license for searchable PDF export and batch OCR.
+Open the one-click [sample demo](/demo) to inspect a realistic field-notes page, apply a reversible pixel repair, and export its page-referenced Markdown. The demo is in memory only and is discarded when you leave it.
 
-No page image or recognised text is uploaded by the product. OCR is best for printed material and is not archival certification: inspect flagged passages against the original.
+## Run and verify
 
-## Develop
-
-```
-npm install
-npm run dev
+```sh
+npm ci
 npm test
-npm run build   # -> dist/
+npm run lint
+npm run build
+npm run test:claims
 ```
 
-The static landing/workspace build is exactly `dist/site` (with `index.html` at that directory root). For the Tauri desktop shell, run `npm run tauri dev` after installing Rust.
+`npm run build` writes the static site to `dist/site`. Run `npm run dev` for the web workspace, or `npm run tauri dev` after installing the Rust toolchain for the Tauri desktop shell.
 
-## Test and release
+## What is stored
 
-```
-npm test
-npm run build:site
-```
+Document pages and recognised text remain in browser/app memory until you export them. A restored Local Pro license token is stored in local storage. There is no analytics or third-party font/CDN dependency.
 
-Tag `v0.1.0` to trigger the GitHub Actions release workflow. It builds unsigned DMG installers (macOS arm64 and x64), an unsigned Windows installer, and Linux AppImage/deb packages. Users may need to explicitly confirm opening unsigned builds. Release checksums are published in `SHA256SUMS`; the landing page resolves a platform download from `latest.json`.
+## Local Pro and installers
 
-On macOS: download, move to Applications, then right-click → Open on first run. On Windows: use the downloaded unsigned installer. Linux users can make the AppImage executable or install the `.deb`.
+Local Pro is a $19 one-time license for searchable-PDF export. The checkout and license verification use Sociobot/Dodo. Markdown export remains free.
 
-`/install.sh` and `/install.ps1` download a release asset and verify its SHA-256 before starting/placing it; only use them once release asset names have been checked.
+Tag `v0.1.1` to run the GitHub Actions desktop matrix. It builds unsigned macOS DMGs (arm64 and x64), Windows installers, and Linux AppImage/deb artifacts, then publishes `SHA256SUMS` and `latest.json` with the GitHub Release. macOS users may need right-click → Open; Windows users may see the unsigned-app prompt.
+
+`/install.sh` and `/install.ps1` download a released asset and verify its SHA-256 before installing or running it.
+
+## Documentation
+
+- [.factory/demo.md](.factory/demo.md) describes the isolated sample workspace.
+- [.factory/claims.json](.factory/claims.json) maps each reliance claim to an observable browser test.
+- [Privacy](/privacy) and [Terms](/terms) describe data and licensing practices.

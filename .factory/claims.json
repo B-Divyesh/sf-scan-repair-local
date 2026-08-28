@@ -1,0 +1,8 @@
+[
+  {"id":"demo-sandbox","claim":"Try it with sample data opens an isolated demo that can be reset.","where":"landing action, /demo","test":"npm run test:claims -- --grep @claim:demo-sandbox","sandbox":"fresh browser context at /demo"},
+  {"id":"reversible-repair","claim":"Applied rotation repairs change page pixels and Undo restores the prior page.","where":"workspace repair panel","test":"npm run test:claims -- --grep @claim:reversible-repair","sandbox":"sample page in a fresh /demo context"},
+  {"id":"markdown-export","claim":"Exports the sample’s recognised text as Markdown with a page reference.","where":"workspace export panel","test":"npm run test:claims -- --grep @claim:markdown-export","sandbox":"sample page in a fresh /demo context"},
+  {"id":"local-processing","claim":"Demo document processing makes requests only to this app’s origin.","where":"landing facts, README, privacy page","test":"npm run test:claims -- --grep @claim:local-processing","sandbox":"fresh /demo context; repair and Markdown export"},
+  {"id":"pro-searchable-pdf","claim":"Local Pro costs $19 once and adds searchable-PDF export.","where":"landing, terms, README","test":"npm run test:claims -- --grep @claim:pro-searchable-pdf","sandbox":"fresh /demo context with a locally seeded verified license verdict"},
+  {"id":"offline-demo","claim":"The sample demo reloads offline after the first visit.","where":"landing facts, README","test":"npm run test:claims -- --grep @claim:offline-demo","sandbox":"fresh context; visit /demo; wait for the service worker; set offline; reload"}
+]

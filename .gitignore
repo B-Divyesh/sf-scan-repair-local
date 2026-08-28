@@ -6,3 +6,4 @@ graphify-out/
 .DS_Store
 public/ocr/
 src-tauri/target/
+test-results/
