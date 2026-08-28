@@ -24,7 +24,7 @@ Document pages and recognised text remain in browser/app memory until you export
 
 Local Pro is a $19 one-time license for searchable-PDF export. The checkout and license verification use Sociobot/Dodo. Markdown export remains free.
 
-Tag `v0.1.1` to run the GitHub Actions desktop matrix. It builds unsigned macOS DMGs (arm64 and x64), Windows installers, and Linux AppImage/deb artifacts, then publishes `SHA256SUMS` and `latest.json` with the GitHub Release. macOS users may need right-click → Open; Windows users may see the unsigned-app prompt.
+Tag a `v*` version to run the GitHub Actions desktop matrix. It builds unsigned macOS DMGs (arm64 and x64), Windows installers, and Linux AppImage/deb artifacts, then publishes `SHA256SUMS` and `latest.json` with the GitHub Release. macOS users may need right-click → Open; Windows users may see the unsigned-app prompt.
 
 `/install.sh` and `/install.ps1` download a released asset and verify its SHA-256 before installing or running it.
 

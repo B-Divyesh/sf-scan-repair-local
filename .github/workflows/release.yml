@@ -67,6 +67,16 @@ jobs:
       - name: Create checksums and manifest
         run: |
           cd release
+          # GitHub release uploads normalize spaces in asset names. Normalize
+          # here first so the downloadable name, checksum, and manifest agree.
+          find . -type f \( -iname '*.dmg' -o -iname '*.msi' -o -iname '*.exe' -o -iname '*.AppImage' -o -iname '*.deb' \) -print0 | while IFS= read -r -d '' file; do
+            directory=$(dirname "$file")
+            base=$(basename "$file")
+            normalized=$(printf '%s' "$base" | tr ' ' '.')
+            if [ "$base" != "$normalized" ]; then
+              mv "$file" "$directory/$normalized"
+            fi
+          done
           find . -type f -not -name SHA256SUMS -not -name latest.json -print0 | while IFS= read -r -d '' file; do
             hash=$(sha256sum "$file" | awk '{print $1}')
             printf '%s  %s\n' "$hash" "$(basename "$file")"
