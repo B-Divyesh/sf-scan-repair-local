@@ -1,63 +1,34 @@
-# Scan Repair Local — independent verification 3 handoff
+# Scan Repair Local — independent verification 4 handoff
 
 ## Result: FAIL
 
-Candidate `1e5e0101ce48c57f3d47965586c130ad3d5290eb` was independently tested on 2026-08-28 against `https://scan-repair-local.sociobot.in/`. Do not release it as accepted.
-
-The full evidence and defect list are in [verification-3.md](verification-3.md). No product code was changed; this verification adds only QA documentation and evidence.
+Candidate `e05edbdfd294f209f20b96629a1accad1bbbafe1` was independently verified on 2026-08-28 against `https://scan-repair-local.sociobot.in/`. Do not release it as accepted. Full evidence is in [verification-4.md](verification-4.md). No product code was changed; this update contains QA documentation only.
 
 ## Release blockers
 
-1. **Live OCR is broken by CSP.** The live action remained at “Preparing local OCR…” for 180 seconds and raised a WebAssembly CSP `CompileError`. The local claim test passes because Vite preview does not serve production headers. Real imported pages cannot reach either export because OCR never supplies text.
-2. **Desktop downloads are stale.** The latest `v0.1.2` artifacts were built from `3cc129f`, before the candidate's skew/OCR changes. The checksum-valid AppImage launches but visibly lacks “Skew estimate”; it still shows “Rotation / None.”
-3. **The light demo has a serious axe color-contrast violation** on four nodes. The current test checks dark demo only.
-4. **Claims remain incomplete.** “We check an active license at most once a day” is unlisted and false on the `?license=` return path, which makes two immediate verify calls. The broad offline and README release claims are not proven by their listed tests.
+1. **Live OCR fails under the deployed CSP.** The real browser action stayed disabled at “Preparing local OCR…” for 180.9 seconds and threw a WebAssembly CSP `CompileError`. The local claim passes because Vite preview does not serve production response headers.
+2. **Desktop releases are stale.** The deployed static web build byte-matches this candidate, but latest desktop release `v0.1.2` was built from `3cc129f`, before material candidate runtime changes. Its checksums are valid, but it is not this candidate.
+3. **A visible once-per-day license-check claim is false and unlisted.** A fresh `?license=` return made two immediate verification requests for the same license token.
 
-## Other defects
+## Verification summary
 
-- Flag, repair, and reset rerenders move keyboard focus to `<body>`.
-- Rotation clamps correctly at ±8°, but its visible value remains “None” while turning.
-- Some mobile controls are under 44×44 px; the page number/status collide at 200% text.
-- Unknown routes return the landing page with HTTP 200 instead of the designed 404.
-- Legal pages omit skip links and show version 0.1.1 while the app is 0.1.2.
-- Scoop metadata points to v0.1.0 with a placeholder checksum; the winget file has no installer URL/hash.
+- All ten commands in `.factory/claims.json` passed individually; full browser suite: 12/12 passing.
+- `npm test`, `npm run lint`, `npm run build`, and production dependency audit passed; build emits `dist/site`.
+- First-read and one-click demo gates pass. Repair/Undo, page diagnosis, flagging, Markdown export, local privacy behaviour, offline demo reload, security headers, cache policy, and rate limiting pass.
+- Live axe: zero serious/critical WCAG violations on landing and dark demo. Lighthouse: Performance 93, Accessibility 99, Best Practices 100, SEO 100.
+- Rate-limit burst: 30×200 then 10×429 of 40 concurrent verify requests; sampled 429s included `Retry-After: 3`.
+- A published Windows installer and Linux AppImage both matched their SHA256SUMS entries.
 
-## Commands and results
+## Follow-up issues
 
-```sh
-npm ci                                             # pass
-# every command in .factory/claims.json separately # 10/10 pass
-npm test                                           # pass, 3 tests
-npm run lint                                       # pass
-CI=1 npm run test:browser                          # pass, 12 tests
-npm audit --omit=dev --audit-level=high            # pass, 0 vulnerabilities
-npm run build                                      # pass, dist/site
-cargo test --manifest-path src-tauri/Cargo.toml --locked # pass, 0 Rust tests
-```
-
-Factory `verify-url.sh` passed its cold-load smoke test. Lighthouse mobile scored 99 performance, 99 accessibility, 100 best practices, and 100 SEO; FCP 1.1 s, LCP 2.0 s, TBT 50 ms, CLS 0. Initial JS/CSS/hero budgets pass.
-
-The local static build byte-matches the live HTML, entry JS, CSS, service worker, manifest, privacy, and terms files. Passive loads have no console errors; invoking OCR produces the blocking CSP error.
-
-The Sociobot verify endpoint rate limit passed: a 60-request burst returned 30×200 and 30×429; 429 responses included `Retry-After: 4`.
-
-## Verified positive behavior
-
-- First-read and one-click demo gates pass.
-- Repair changes pixels and Undo restores them exactly.
-- Controlled +3° input reports a high-confidence 3.0° correction.
-- Markdown and seeded-license searchable-PDF exports work and include searchable page text.
-- Real PNG and two-page PDF imports work; invalid PDF recovery is clear.
-- Demo document data stays out of localStorage, sessionStorage, and IndexedDB.
-- Service-worker update cleanup and offline demo reload work.
-- Security headers and immutable hashed-asset caching are present.
-- Release matrix has macOS, Windows, and Linux assets; the downloaded Linux AppImage matched `SHA256SUMS` and launched under Xvfb.
-- No sign-in is present, so Entra tenant validation is not applicable.
+- The visible file action uses invalid `label role="button"` markup; Lighthouse also reports an accessible-name mismatch for the brand.
+- Unknown URLs return the SPA with HTTP 200 instead of the supplied 404 page/status.
+- Privacy/Terms still say version 0.1.1; several mobile targets are smaller than 44×44 CSS px.
 
 ## Next steps
 
-Fix CSP for bundled WASM in both web and Tauri, add a live-header OCR regression, publish a new release from the repaired commit, correct light-demo contrast, and close the claim/focus/mobile issues. Then rerun every claim command first and repeat live OCR plus installed-artifact OCR/export before acceptance.
+Fix the narrow WebAssembly CSP requirement and OCR recovery path in both web and Tauri, add a production-header regression, publish a fresh desktop release from the repaired commit, and correct the duplicate license verification/claim. Then rerun all claims first and verify live OCR plus an installed artifact end to end.
 
 ## Needs operator action
 
-Desktop releases remain unsigned. Optional signing requires `APPLE_CERTIFICATE` for macOS notarization and `WINDOWS_CERT_PFX` for Windows Authenticode.
+Desktop artifacts remain unsigned. Optional signing requires `APPLE_CERTIFICATE` for macOS notarization and `WINDOWS_CERT_PFX` for Windows Authenticode.
