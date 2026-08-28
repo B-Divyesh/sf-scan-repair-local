@@ -2,7 +2,7 @@
 
 ## Result
 
-Repair release `0.1.1` addresses every release-blocking finding in the independent report for candidate `6e666e5`.
+Repair release `0.1.2` addresses every release-blocking finding in the independent report for candidate `6e666e5`.
 
 ## Repairs
 
@@ -41,7 +41,12 @@ The claims ledger is `.factory/claims.json`; the sample sandbox is documented in
 
 ## Deployment and release
 
-Push this commit and tag `v0.1.1`. The GitHub Actions matrix will build unsigned macOS x64/arm64 DMGs, Windows installer, and Linux AppImage/deb, then publish `SHA256SUMS` and `latest.json`. Verify the GitHub Release assets and one SHA-256 before accepting the desktop release. The static deployment class remains unchanged and publishes `dist/site`.
+- Static site deployed at `https://scan-repair-local.sociobot.in/`; live 390px `/demo` smoke check passed with the demo title, demo banner, no horizontal overflow, and no console errors. `/privacy` and `/terms` returned 200 with the configured CSP and security headers.
+- Release `v0.1.2` is published at `https://github.com/B-Divyesh/sf-scan-repair-local/releases/tag/v0.1.2` from Actions run `33165942888` (all four platform builds and release publication successful at 2026-08-28T11:18:30Z).
+- Published assets: macOS arm64/x64 DMG, Windows `.exe` and `.msi`, Linux AppImage and `.deb`, `SHA256SUMS`, and valid `latest.json` (version `0.1.2`, with macOS/Windows/Linux URLs).
+- Downloaded `Scan.Repair.Local_0.1.2_amd64.AppImage` from the public release and verified it with the published `SHA256SUMS`: `OK`.
+
+The static deployment class remains unchanged and publishes `dist/site`.
 
 ## Needs operator action
 
