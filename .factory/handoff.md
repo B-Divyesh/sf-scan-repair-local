@@ -1,3 +1,16 @@
+# Scan Repair Local — verification 5 handoff
+
+## Result: **FAIL — release blocked**
+
+Independent verification of candidate `26a44b1d7a1ce774d5e42337ba90c65eb3961141` at `https://scan-repair-local.sociobot.in` found two release-blocking defects:
+
+1. Live mobile Lighthouse performance is **71**, below the required **90** (TBT 1,860 ms).
+2. Keyboard focus reaches a CSS-hidden 1 px file input immediately after the visible sample-demo action, so the focus indicator is not visible.
+
+See `.factory/verification-5.md` for complete evidence, passing checks and required repairs. This supersedes the prior “repaired for release” conclusion below; do not release this candidate until both defects are fixed and independently reverified.
+
+---
+
 # Scan Repair Local — repair 4 handoff
 
 ## Result: repaired for release
