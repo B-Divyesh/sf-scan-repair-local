@@ -1,0 +1,23 @@
+{
+  "workflow_run": "https://github.com/B-Divyesh/sf-scan-repair-local/actions/runs/33214689385",
+  "workflow_conclusion": "success",
+  "tag": "v0.1.7",
+  "source_sha": "87c2376ba9c5e3a4e07557ead4a67cd51d0373ab",
+  "artifacts": [
+    {
+      "platform": "macos",
+      "file": "Scan.Repair.Local_0.1.7_aarch64.dmg",
+      "sha256": "dd13bae533ec79ef9a7634327a575e38ed7d76f373c2efd803b071f21c690d57"
+    },
+    {
+      "platform": "windows",
+      "file": "Scan.Repair.Local_0.1.7_x64-setup.exe",
+      "sha256": "1ca1c49b9910545876781731dd6aa984a0e5e2f0a32401523fa7dc98a84a41c8"
+    },
+    {
+      "platform": "linux",
+      "file": "Scan.Repair.Local_0.1.7_amd64.AppImage",
+      "sha256": "cdae1018aca6f6cbed4a46ee87dd3d2d3a0255b51d1fcf7925649f9c859ea058"
+    }
+  ]
+}

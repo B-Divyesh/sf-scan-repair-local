@@ -1,0 +1,29 @@
+{
+  "landing": {
+    "priceCopy": "The free app repairs pages and exports Markdown. Local Pro costs $19 once and adds searchable-PDF export. No subscription.",
+    "buyLink": "https://api.sociobot.in/api/v1/products/scan-repair-local/checkout",
+    "releaseNote": "v0.1.7 is ready: Scan.Repair.Local_0.1.7_amd64.AppImage. Unsigned builds may need an extra open confirmation.",
+    "mainFocused": true,
+    "axe": [],
+    "errors": []
+  },
+  "demo": {
+    "axeLight": [],
+    "axeDark": [],
+    "errors": [],
+    "thirdPartyDocumentRequests": []
+  },
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390,
+    "imageWidth": "1200",
+    "imageHeight": "1600",
+    "primaryHeight": 48,
+    "textResize": {
+      "width": 390,
+      "scrollWidth": 390,
+      "exportVisible": true
+    }
+  },
+  "reducedMotion": "1e-05s"
+}
