@@ -30,9 +30,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
-        with: { targets: ${{ matrix.target }} }
+        with:
+          targets: ${{ matrix.target }}
       - uses: actions/setup-node@v4
-        with: { node-version: 22, cache: npm }
+        with:
+          node-version: 22
+          cache: npm
       - run: npm ci
       - uses: tauri-apps/tauri-action@v0
         env:
