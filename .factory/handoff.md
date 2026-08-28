@@ -1,49 +1,57 @@
-# Scan Repair Local — independent verification 6 handoff
+# Scan Repair Local — repair 6 handoff
 
-## Result: FAIL
+## Result: repaired and ready for static deployment
 
-Candidate `d0254841c521e5f188200f5ab0d1d141ae0f2f47` at <https://scan-repair-local.sociobot.in/> is **not accepted**. Full evidence and findings are in `.factory/verification-6.md`. No product code was changed.
+This repair addresses every release blocker in independent verification 6 for candidate `d0254841c521e5f188200f5ab0d1d141ae0f2f47`. It preserves the Tauri 2 desktop application and static landing-site deployment class.
 
-## Release blockers
+## What changed
 
-1. The landing page falsely says “Downloads are being published” although v0.1.4 is live. This visitor-reliance statement is absent from `.factory/claims.json`; release metadata is fetched only after the click.
-2. `/privacy` and `/terms` lack the required skip link. The 404 also lacks the standard header/footer and skip link.
-3. The desktop-app landing page lacks the required captioned 3–5-frame product walkthrough.
-4. Social metadata uses a 1200×800 image instead of 1200×630, and the Apple touch icon is an SVG rather than the required 180px asset.
+1. **Truthful desktop download state:** the landing page now requests GitHub’s current release metadata as it loads, detects Windows, macOS, or Linux, and immediately labels and links the matching real asset. Release metadata is cached locally for one hour. The “Downloads are being published” state appears only if the request or matching asset is unavailable. Demo mode never makes this external request.
+2. **Claim coverage:** `.factory/claims.json` now declares `desktop-download`; its exact Playwright regression intercepts recorded release metadata and proves the Linux action is visible before a click, names `v0.1.4`, and uses the AppImage asset URL.
+3. **Complete secondary-route shell:** `/privacy`, `/terms`, and the 404 have a visible-on-focus skip link, focusable `main`, consistent product navigation, and the shared footer. Regression coverage tabs through the skip link and verifies the shell on all three routes.
+4. **Desktop walkthrough:** the landing now has four captioned frames from the shipped sample workspace: open, inspect, repair, and review/export. The captures are real UI states, not mockups.
+5. **Metadata artwork:** Open Graph and Twitter now use an original, reviewed `1200×630` social image; an exact `180×180` PNG Apple touch icon is supplied and linked. Asset provenance and prompts are in `.factory/design.md` and `assets/src/social-reading-room.png.json`.
+6. **Safe update:** the service-worker cache moved from `scan-repair-local-v7` to `scan-repair-local-v8`, so visitors receive the repaired landing shell rather than a stale cached page.
 
-## Verification summary
-
-- Clean identity: requested commit, initially clean, matching `origin/main`.
-- `npm ci`: PASS.
-- All 11 exact `.factory/claims.json` commands: PASS.
-- `npm test`: PASS, 3/3.
-- `npm run lint`: PASS.
-- `npm run build`: PASS; `dist/site` produced.
-- `CI=1 npm run test:browser`: PASS, 17/17.
-- `npm audit --omit=dev --audit-level=high`: PASS, 0 vulnerabilities.
-- `cargo test --manifest-path src-tauri/Cargo.toml --locked`: PASS after installing the release workflow's Linux prerequisites; no Rust tests are defined.
-- Live real PNG and two-page PDF repair/OCR/Markdown flows: PASS; invalid input recovery and 1×1 boundary input: PASS.
-- Live axe serious/critical: 0 on landing and both demo themes. 390px keyboard, visible controls, reduced motion, and 200% text checks passed, apart from the route-level skip-link blocker above.
-- Lighthouse mobile: home 93/100/100/100; demo 100/100/100/100. Home LCP 2.2 s, demo LCP 0.9 s; CLS 0 on both.
-- Privacy: real document processing remained same-origin; no analytics/CDN/font/upload requests or browser errors observed.
-- PWA: offline reload and real offline OCR passed; old cache migration passed.
-- Headers/caching: CSP, HSTS, nosniff, referrer/permissions policies and immutable hashed assets passed.
-- Rate limit: 30 successful license checks in the observed window, then 429 with `Retry-After: 4`.
-- Deployment: the fresh build matches all live product files byte-for-byte.
-- Desktop: the v0.1.4 four-platform workflow is green; release assets/checksums/manifest exist; the downloaded Debian package checksum and metadata passed; extracted binary launched.
-
-## Reproduce
+## How to run and verify
 
 ```sh
 npm ci
-npm test
 npm run lint
+npm test
 npm run build
 CI=1 npm run test:browser
 npm audit --omit=dev --audit-level=high
 cargo test --manifest-path src-tauri/Cargo.toml --locked
 ```
 
-## Next steps
+Run the browser claim commands exactly as declared in `.factory/claims.json`; all twelve use `npm run test:claims -- --grep @claim:<id>`.
 
-Fix the four blockers above without weakening the working local-first scan flow. Add the release-status claim/test, redeploy, and run independent verification again.
+## Verification evidence — 2026-08-28 UTC
+
+- Clean install: `npm ci` passed; npm reported 0 vulnerabilities.
+- Unit tests: `npm test` passed, 3/3.
+- Type/lint: `npm run lint` passed.
+- Production build: `npm run build` passed and produced `dist/site` with 9.50 KB gzip initial JavaScript and 3.49 KB gzip CSS.
+- Browser integration: `CI=1 npm run test:browser` passed, 20/20. This includes desktop and 390px mobile keyboard coverage, light/dark axe checks, offline demo reload, skip-link focus on legal/404 routes, walkthrough/metadata checks, and the new release-state regression.
+- Claims: all 12 manifest commands were rerun separately and passed, including `@claim:desktop-download`.
+- Production dependencies: `npm audit --omit=dev --audit-level=high` passed with 0 vulnerabilities.
+- Desktop core: after installing the same Linux GTK/WebKit prerequisites as `.github/workflows/release.yml`, `cargo test --manifest-path src-tauri/Cargo.toml --locked` passed (0 Rust tests are defined; library, binary, and doc-test targets compile).
+- Factory URL checks: `/opt/fleet/lib/verify-url.sh` passed on local production `/` and `/demo`: 200, title/lang, one h1, main landmark, no missing image alt text, no unnamed buttons, and no console errors. Evidence: `.factory/qa-artifacts/verify-url-repair-6*/`.
+- Accessibility: the repository Playwright axe WCAG 2 A/AA scan passed with no serious/critical issues on landing plus light and dark demo. The standalone `@axe-core/cli` was also attempted but could not locate a system Chrome binary; it cannot consume the preinstalled Playwright Chromium. The Playwright axe scan is the recorded equivalent.
+- Lighthouse production-preview mobile audit: Performance 96, Accessibility 100, Best Practices 100, SEO 100; FCP 1.1 s, LCP 2.8 s, TBT 20 ms, CLS 0. The previous deployed audit measured LCP 2.2 s; this local disposable-container run was slower but remains over the 90 performance gate. Report: `.factory/qa-artifacts/lighthouse-repair-6.json`.
+- Privacy and offline: the local-processing claim records only the product origin during repair/export, and the offline claim reloads `/demo` after first visit with the new `v8` cache.
+
+## Deployment and release
+
+Build the static site with `npm run build`, then deploy exactly with:
+
+```sh
+/opt/fleet/lib/deploy-static.sh scan-repair-local dist/site
+```
+
+The existing `v0.1.4` cross-platform Tauri release remains valid because this repair changes the static landing/PWA shell, not the shipped desktop binary. The release workflow remains the required macOS arm64/x64, Windows x64, and Linux x64 matrix.
+
+## Needs operator action
+
+Desktop artifacts remain intentionally unsigned. macOS notarization and Windows Authenticode require the owner-provided `APPLE_CERTIFICATE` and `WINDOWS_CERT_PFX` secrets. No secrets are stored in this repository.

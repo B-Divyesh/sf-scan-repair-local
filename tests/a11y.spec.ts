@@ -70,3 +70,26 @@ test('production routing returns the styled 404 document with an actual 404 stat
   expect(response.status()).toBe(404)
   expect(await response.text()).toContain('That page is not here.')
 })
+
+test('legal and 404 routes keep the shared skip link, header, and footer', async ({ page, request }) => {
+  for (const path of ['/privacy', '/terms', '/no-such-route']) {
+    await page.goto(path)
+    await expect(page.locator('.skip-link')).toBeAttached()
+    await page.locator('.skip-link').focus()
+    await expect(page.locator('.skip-link')).toBeVisible()
+    await page.keyboard.press('Enter')
+    await expect(page.locator('main')).toBeFocused()
+    await expect(page.locator('header nav')).toBeVisible()
+    await expect(page.locator('footer')).toBeVisible()
+  }
+  expect((await request.get('/privacy')).status()).toBe(200)
+})
+
+test('landing supplies four captioned desktop walkthrough frames and required social artwork', async ({ page }) => {
+  await page.goto('/')
+  await expect(page.locator('.walkthrough li')).toHaveCount(4)
+  await expect(page.locator('.walkthrough img')).toHaveCount(4)
+  await expect(page.locator('.walkthrough figcaption')).toHaveCount(4)
+  expect(await page.locator('meta[property="og:image"]').getAttribute('content')).toContain('/social-reading-room.webp')
+  expect(await page.locator('link[rel="apple-touch-icon"]').getAttribute('href')).toBe('/apple-touch-icon.png')
+})
