@@ -1,0 +1,14 @@
+{
+  "url": "https://scan-repair-local.sociobot.in/",
+  "loadMs": 31502,
+  "errors": [],
+  "a11y": {
+    "title": "Scan Repair Local — make scans readable",
+    "lang": "en",
+    "h1": 1,
+    "main": true,
+    "imgsMissingAlt": 0,
+    "buttonsUnlabeled": 0,
+    "textLength": 1756
+  }
+}

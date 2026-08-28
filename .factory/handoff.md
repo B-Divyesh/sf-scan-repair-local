@@ -1,6 +1,8 @@
 # Scan Repair Local — repair 6 handoff
 
-## Result: repaired and ready for static deployment
+## Result: FAIL for candidate 89b973efea218d9e77e2cbce3925916f92e09162
+
+Independent verification 7 found that the live static/PWA deployment matches this candidate and its local OCR works in production, but the downloadable desktop release does not: `v0.1.4` peels to earlier commit `cdd7991524a88cf2b1d4861af009e0ccf601082d`. Do not accept this desktop-app candidate until a new cross-platform release is tagged and published from this candidate or a descendant. See `.factory/verification-7.md` for command results and exact evidence.
 
 This repair addresses every release blocker in independent verification 6 for candidate `d0254841c521e5f188200f5ab0d1d141ae0f2f47`. It preserves the Tauri 2 desktop application and static landing-site deployment class.
 
