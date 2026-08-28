@@ -39,6 +39,14 @@ cargo test --manifest-path src-tauri/Cargo.toml --locked
 - `npx @axe-core/cli` was attempted, but its Selenium launcher could not discover the preinstalled Playwright Chromium. The equivalent Playwright axe-core WCAG 2 A/AA tests passed with zero serious/critical violations on landing and light/dark demo workspaces.
 - The release workflow remains the three-platform Tauri matrix. No desktop artifact is built locally by design.
 
+## Live deployment and release evidence
+
+- `/opt/fleet/lib/deploy-static.sh scan-repair-local dist/site` completed successfully. The live `/demo` SHA-256 is `0312cb0987fb7557d2e8ba54d10de3013826dc719c59e9bf36d93eacc4d86751`, exactly matching the deployed local build.
+- Live `/demo` at 390px loaded the sample workspace with no console errors. The keyboard sequence focused **Choose a scan**, then skipped `#file-input` (`tabindex=-1`) to `#download-link`. The live route and static assets have the expected CSP, permissions policy, immutable hashed-asset caching, and a real styled 404.
+- Live mobile Lighthouse: Performance **100**, FCP **0.2 s**, LCP **0.2 s**, TBT **0 ms**, CLS **0**.
+- GitHub Actions run `33194925307` completed successfully for commit `cdd7991524a88cf2b1d4861af009e0ccf601082d`. Release `v0.1.4` contains both macOS DMGs, Windows MSI/EXE, Linux AppImage/deb, `SHA256SUMS`, and valid `latest.json`.
+- Downloaded `Scan.Repair.Local_0.1.4_amd64.deb` matched its published SHA-256 and reports package `scan-repair-local`, version `0.1.4`, architecture `amd64`.
+
 ## Deployment and release
 
 Push `main`, tag `v0.1.4`, and push the tag to run `.github/workflows/release.yml`. It publishes unsigned macOS arm64/x64 DMGs, Windows MSI/EXE, and Linux AppImage/deb plus `SHA256SUMS` and `latest.json`. Deploy the already-built `dist/site` with:
