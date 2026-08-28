@@ -88,7 +88,7 @@ jobs:
           win=$(find . -type f \( -iname '*.exe' -o -iname '*.msi' \) -print -quit | sed 's#^.*/##')
           linux=$(find . -type f -iname '*.AppImage' -print -quit | sed 's#^.*/##')
           test -n "$mac" && test -n "$win" && test -n "$linux"
-          jq -n --arg v "${tag#v}" --arg repo "$GITHUB_REPOSITORY" --arg tag "$tag" --arg sha "$GITHUB_SHA" --arg mac "$mac" --arg win "$win" --arg linux "$linux" '{version:$v,tag:$tag,source_sha:$sha,platforms:{macos:{url:("https://github.com/"+$repo+"/releases/download/"+$tag+"/"+$mac),format:"DMG"},windows:{url:("https://github.com/"+$repo+"/releases/download/"+$tag+"/"+$win),format:"installer"},linux:{url:("https://github.com/"+$repo+"/releases/download/"+$tag+"/"+$linux),format:"AppImage"}}}' > latest.json
+          jq -cn --arg v "${tag#v}" --arg repo "$GITHUB_REPOSITORY" --arg tag "$tag" --arg sha "$GITHUB_SHA" --arg mac "$mac" --arg win "$win" --arg linux "$linux" '{version:$v,tag:$tag,source_sha:$sha,platforms:{macos:{url:("https://github.com/"+$repo+"/releases/download/"+$tag+"/"+$mac),format:"DMG"},windows:{url:("https://github.com/"+$repo+"/releases/download/"+$tag+"/"+$win),format:"installer"},linux:{url:("https://github.com/"+$repo+"/releases/download/"+$tag+"/"+$linux),format:"AppImage"}}}' > latest.json
       - name: Publish release
         uses: softprops/action-gh-release@v2
         with:

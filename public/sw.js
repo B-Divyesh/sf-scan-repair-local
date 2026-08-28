@@ -1,4 +1,4 @@
-const CACHE = 'scan-repair-local-v9'
+const CACHE = 'scan-repair-local-v10'
 const CORE = ['/', '/demo', '/reading-room.webp', '/sample-scan.svg', '/manifest.webmanifest', '/favicon.svg', '/ocr/worker.min.js', '/ocr/eng.traineddata.gz', '/ocr/tesseract-core-simd-lstm.wasm.js', '/ocr/tesseract-core-simd-lstm.wasm']
 async function cacheBuildAssets(cache) {
   const manifest = await fetch('/asset-manifest.json', { cache: 'no-cache' }).then(response => response.json())

@@ -2,19 +2,19 @@ import { describe, expect, test } from 'vitest'
 import { validateReleaseIdentity } from './verify-release.mjs'
 
 const expectedSha = '89b973efea218d9e77e2cbce3925916f92e09162'
-const expectedTag = 'v0.1.5'
+const expectedTag = 'v0.1.6'
 const assets = [
   'latest.json', 'SHA256SUMS',
-  'Scan.Repair.Local_0.1.5_aarch64.dmg',
-  'Scan.Repair.Local_0.1.5_x64-setup.exe',
-  'Scan.Repair.Local_0.1.5_amd64.AppImage',
+  'Scan.Repair.Local_0.1.6_aarch64.dmg',
+  'Scan.Repair.Local_0.1.6_x64-setup.exe',
+  'Scan.Repair.Local_0.1.6_amd64.AppImage',
 ].map(name => ({ name }))
 const manifest = {
-  version: '0.1.5', tag: expectedTag, source_sha: expectedSha,
+  version: '0.1.6', tag: expectedTag, source_sha: expectedSha,
   platforms: {
-    macos: { url: `https://github.com/example/repo/releases/download/${expectedTag}/Scan.Repair.Local_0.1.5_aarch64.dmg` },
-    windows: { url: `https://github.com/example/repo/releases/download/${expectedTag}/Scan.Repair.Local_0.1.5_x64-setup.exe` },
-    linux: { url: `https://github.com/example/repo/releases/download/${expectedTag}/Scan.Repair.Local_0.1.5_amd64.AppImage` },
+    macos: { url: `https://github.com/example/repo/releases/download/${expectedTag}/Scan.Repair.Local_0.1.6_aarch64.dmg` },
+    windows: { url: `https://github.com/example/repo/releases/download/${expectedTag}/Scan.Repair.Local_0.1.6_x64-setup.exe` },
+    linux: { url: `https://github.com/example/repo/releases/download/${expectedTag}/Scan.Repair.Local_0.1.6_amd64.AppImage` },
   },
 }
 const checksums = assets.slice(2).map(({ name }, index) => `${String(index + 1).padStart(64, '0')}  ${name}`).join('\n')
