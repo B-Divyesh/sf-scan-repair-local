@@ -57,6 +57,27 @@ test('demo startup reuses its measured fixture instead of rasterising it', async
   expect(await page.evaluate(() => (window as typeof window & { __demoRasterWrites: number }).__demoRasterWrites)).toBe(0)
 })
 
+test('demo page media reserves its mobile layout before the image loads', async ({ browser }) => {
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 } })
+  const page = await context.newPage()
+  await page.addInitScript(() => {
+    ;(window as typeof window & { __layoutShift: number }).__layoutShift = 0
+    new PerformanceObserver(list => {
+      for (const entry of list.getEntries() as Array<PerformanceEntry & { hadRecentInput: boolean; value: number }>) {
+        if (!entry.hadRecentInput) (window as typeof window & { __layoutShift: number }).__layoutShift += entry.value
+      }
+    }).observe({ type: 'layout-shift', buffered: true })
+  })
+  await page.goto('/demo')
+  const image = page.locator('#page-image')
+  await expect(image).toHaveAttribute('width', '1200')
+  await expect(image).toHaveAttribute('height', '1600')
+  await expect(image).toBeVisible()
+  await page.waitForTimeout(1_000)
+  expect(await page.evaluate(() => (window as typeof window & { __layoutShift: number }).__layoutShift)).toBeLessThan(0.1)
+  await context.close()
+})
+
 test('primary file action uses a native button and opens the file chooser', async ({ page }) => {
   await page.goto('/')
   await expect(page.locator('label.file-trigger')).toHaveCount(0)

@@ -78,12 +78,12 @@ test('@claim:daily-license-check verifies a returned license once and caches its
 })
 
 test('@claim:desktop-download shows the detected platform asset from the current release before a visitor clicks', async ({ page }) => {
-  await page.route('https://api.github.com/repos/B-Divyesh/sf-scan-repair-local/releases/latest', route => route.fulfill({ contentType: 'application/json', body: JSON.stringify({ tag_name: 'v0.1.6', assets: [{ name: 'Scan.Repair.Local_0.1.6_amd64.AppImage', browser_download_url: 'https://github.com/B-Divyesh/sf-scan-repair-local/releases/download/v0.1.6/Scan.Repair.Local_0.1.6_amd64.AppImage' }] }) }))
+  await page.route('https://api.github.com/repos/B-Divyesh/sf-scan-repair-local/releases/latest', route => route.fulfill({ contentType: 'application/json', body: JSON.stringify({ tag_name: 'v0.1.7', assets: [{ name: 'Scan.Repair.Local_0.1.7_amd64.AppImage', browser_download_url: 'https://github.com/B-Divyesh/sf-scan-repair-local/releases/download/v0.1.7/Scan.Repair.Local_0.1.7_amd64.AppImage' }] }) }))
   await page.goto('/')
   const download = page.locator('#download-link')
   await expect(download).toHaveText('Download for Linux')
-  await expect(download).toHaveAttribute('href', /Scan\.Repair\.Local_0\.1\.6_amd64\.AppImage$/)
-  await expect(page.locator('#platform-note')).toContainText('v0.1.6 is ready')
+  await expect(download).toHaveAttribute('href', /Scan\.Repair\.Local_0\.1\.7_amd64\.AppImage$/)
+  await expect(page.locator('#platform-note')).toContainText('v0.1.7 is ready')
 })
 
 test('@claim:review-flagging marks a page for manual review and lets the reviewer reverse it', async ({ page }) => {
@@ -120,11 +120,17 @@ test('@claim:pro-searchable-pdf exports the sample as a searchable PDF for a ver
     localStorage.setItem('sb_license_state:scan-repair-local:verified-demo-license', JSON.stringify({ valid: true, checked: Date.now() }))
   })
   await page.goto('/')
-  await expect(page.getByText('Local Pro costs $19 once')).toBeVisible()
+  await expect(page.locator('.download > div:first-child > p:not(.eyebrow):not(.microcopy)')).toHaveText('The free app repairs pages and exports Markdown. Local Pro costs $19 once and adds searchable-PDF export. No subscription.')
+  await expect(page.getByRole('link', { name: 'Buy Local Pro · $19 once' })).toHaveAttribute('href', 'https://api.sociobot.in/api/v1/products/scan-repair-local/checkout')
   await page.goto('/demo')
   const download = page.waitForEvent('download')
   await page.getByRole('button', { name: /Export searchable PDF/ }).click()
   expect((await download).suggestedFilename()).toBe('scan-repair-local-searchable.pdf')
+})
+
+test('@claim:no-subscription displays the complete no-subscription purchase promise', async ({ page }) => {
+  await page.goto('/')
+  await expect(page.locator('.download > div:first-child > p:not(.eyebrow):not(.microcopy)')).toHaveText('The free app repairs pages and exports Markdown. Local Pro costs $19 once and adds searchable-PDF export. No subscription.')
 })
 
 test('@claim:offline-demo reloads the demo after the first visit without a network connection', async ({ page, context }) => {
@@ -139,7 +145,7 @@ test('@claim:offline-demo reloads the demo after the first visit without a netwo
   const serviceWorker = await page.evaluate(async () => {
     await new Promise(resolve => setTimeout(resolve, 2000))
     const registration = await navigator.serviceWorker.getRegistration()
-    const cache = await caches.open('scan-repair-local-v10'); const entries = await cache.keys()
+    const cache = await caches.open('scan-repair-local-v11'); const entries = await cache.keys()
     return { url: location.href, secure: isSecureContext, hasServiceWorker: 'serviceWorker' in navigator, controller: Boolean(navigator.serviceWorker?.controller), installing: registration?.installing?.state, waiting: registration?.waiting?.state, active: registration?.active?.state, caches: await caches.keys(), entries: entries.map(entry => entry.url) }
   })
   expect(serviceWorker).toMatchObject({ controller: true, active: 'activated' })
