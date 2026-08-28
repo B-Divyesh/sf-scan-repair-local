@@ -18,15 +18,13 @@ npm run test:claims
 
 ## What is stored
 
-Document pages and recognised text remain in browser/app memory until you export them. A restored Local Pro license token is stored in local storage. There is no analytics or third-party font/CDN dependency.
+Document pages and recognised text remain in browser/app memory while the workspace is open. A restored Local Pro license token is stored in local storage. The demo makes no third-party requests.
 
 ## Local Pro and installers
 
 Local Pro is a $19 one-time license for searchable-PDF export. The checkout and license verification use Sociobot/Dodo. Markdown export remains free.
 
-Tag a `v*` version to run the GitHub Actions desktop matrix. It builds unsigned macOS DMGs (arm64 and x64), Windows installers, and Linux AppImage/deb artifacts, then publishes `SHA256SUMS` and `latest.json` with the GitHub Release. macOS users may need right-click → Open; Windows users may see the unsigned-app prompt.
-
-`/install.sh` and `/install.ps1` download a released asset and verify its SHA-256 before installing or running it.
+Tag a `v*` version to run the GitHub Actions desktop matrix. It builds unsigned macOS DMGs (arm64 and x64), Windows installers, and Linux AppImage/deb artifacts.
 
 ## Documentation
 

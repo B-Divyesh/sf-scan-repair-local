@@ -1,55 +1,46 @@
 # Scan Repair Local repair handoff
 
-> **Independent verification 2 result: FAIL (2026-08-28).** Candidate `52b46d9c6dd9f901fcce265e1291bc7d6b1fa7be` is live at https://scan-repair-local.sociobot.in/ and the former deployment/release failure is repaired, but it remains unaccepted. `.factory/verification-2.md` records two release blockers: incomplete claim coverage and no user-visible skew diagnosis required by the researched brief. Do not treat the older repair result below as final acceptance.
-
 ## Result
 
-Repair release `0.1.2` addresses every release-blocking finding in the independent report for candidate `6e666e5`.
+This repair addresses both release blockers in independent verification 2 for candidate `52b46d9c6dd9f901fcce265e1291bc7d6b1fa7be` (report commit `9aa4f140019f0c1534dcaa434c0532b0864b0a1d`). The artifact remains a Tauri 2 desktop app with its static companion site in `dist/site`.
 
 ## Repairs
 
-- Added the required claim ledger, isolated `/demo` workspace, shipped realistic field-notes sample, reset/start-for-real controls, and exact Playwright regression coverage.
-- Made repairs per-page. Applied rotation now redraws the bitmap used by OCR/export; Undo restores the exact prior pixels and diagnosis.
-- Updated `pdfjs-dist` to `6.2.108` and `jspdf` to `4.2.1`; production audit is clean.
-- Rebuilt service-worker caching around the Vite asset manifest, versioned cache cleanup, immediate activation, and an offline reload regression.
-- Repaired the paid flow: price is visible, unverified tokens cannot export PDF, verdict/cache data is tied to each token, and invalid status is persistent and visible. Removed the nonexistent batch-OCR claim.
-- Fixed accessible file triggers, labels, 44px controls, dark-mode contrast, focus contrast, keyboard coverage, metadata, manifest, robots/sitemap, security headers, and shared legal-page chrome.
-- Added the missing Tauri entrypoint and removed the dangling Rust library target that caused the release matrix to have no application binary. The release workflow now also installs `libfuse2`; the Tauri CSP permits the GitHub API.
+- Replaced the unusable left/right brightness calculation with a bounded, sampled projection-profile estimate of the text-line angle. The workspace now shows contrast, sharpness, a signed skew estimate, a clockwise/counter-clockwise correction recommendation, and an explicit confidence label. It uses the estimate in the repair recommendation.
+- Added controlled-fixture unit coverage for +3° and -2.5° skew estimates.
+- Completed the claim ledger with exact demo tests for in-memory originals/Undo, before-repair diagnosis, actual bundled local OCR, manual review flags, and no-third-party-resource processing. Existing demo, repair, export, Pro, and offline claims remain covered.
+- The local OCR regression deliberately invokes the shipped Tesseract worker without routes or fixture responses and waits for the user-visible “recognised on this device” result.
+- Narrowed README wording to the observable storage and request boundaries. It no longer makes untested installer-release assertions.
 
 ## Verification
 
-Run from a clean clone:
+From a clean install:
 
 ```sh
 npm ci
-npm run lint
 npm test
+npm run lint
+npm run build
 CI=1 npm run test:browser
 npm audit --omit=dev --audit-level=high
-npm run build
 ```
 
-Results in this worker:
+Evidence from this repair:
 
 - `npm ci` — pass; 0 audit vulnerabilities.
+- `npm test` — pass; 3 tests, including controlled skew fixtures.
 - `npm run lint` — pass.
-- `npm test` — pass, 2 Vitest tests.
-- `CI=1 npm run test:browser` — pass, 8 tests: all six `@claim:` flows, light landing axe, dark workspace axe, desktop keyboard, 390px mobile layout, and offline reload.
+- `npm run build` — pass; writes `dist/site`. Initial entry JS is 8.84 kB gzip and CSS is 3.29 kB gzip; OCR/PDF dependencies remain deferred.
+- `CI=1 npm run test:browser` — pass; 12 browser tests: ten independently runnable `@claim:` tests plus landing/dark-workspace axe, keyboard, 390 px mobile layout, reduced motion, and offline reload.
+- Every command listed in `.factory/claims.json` was also run separately and passed. The local OCR claim completed against the bundled worker.
 - `npm audit --omit=dev --audit-level=high` — pass; 0 vulnerabilities.
-- `npm run build` — pass; `dist/site` emitted. Entry JS is 8.31 kB gzip, CSS 3.28 kB gzip, and hero art remains 235,916 B.
-- `cargo check --manifest-path src-tauri/Cargo.toml` reaches Tauri dependency compilation but cannot finish in this container because host `glib-2.0` development files are absent. The GitHub Linux workflow installs the required WebKit/GTK prerequisites and is the release authority.
+- The Playwright axe integration reports no serious or critical WCAG 2 A/AA findings on the landing or dark demo workspace.
+- `cargo check --manifest-path src-tauri/Cargo.toml` is blocked only by this disposable container missing the host `glib-2.0` development package (`glib-2.0.pc`). The release workflow installs its Linux GTK/WebKit prerequisites before building desktop artifacts.
 
-The claims ledger is `.factory/claims.json`; the sample sandbox is documented in `.factory/demo.md`; plain-language audit is `.factory/copy-audit.md`.
+## Deployment
 
-## Deployment and release
-
-- Static site deployed at `https://scan-repair-local.sociobot.in/`; live 390px `/demo` smoke check passed with the demo title, demo banner, no horizontal overflow, and no console errors. `/privacy` and `/terms` returned 200 with the configured CSP and security headers.
-- Release `v0.1.2` is published at `https://github.com/B-Divyesh/sf-scan-repair-local/releases/tag/v0.1.2` from Actions run `33165942888` (all four platform builds and release publication successful at 2026-08-28T11:18:30Z).
-- Published assets: macOS arm64/x64 DMG, Windows `.exe` and `.msi`, Linux AppImage and `.deb`, `SHA256SUMS`, and valid `latest.json` (version `0.1.2`, with macOS/Windows/Linux URLs).
-- Downloaded `Scan.Repair.Local_0.1.2_amd64.AppImage` from the public release and verified it with the published `SHA256SUMS`: `OK`.
-
-The static deployment class remains unchanged and publishes `dist/site`.
+The static deployment target is `sf-scan-repair-local` in Azure resource group `sociobot`. Deployment and post-deploy live checks are recorded after the repair commit is pushed.
 
 ## Needs operator action
 
-No signing credentials are configured. Optional signing requires `APPLE_CERTIFICATE` for notarized macOS and `WINDOWS_CERT_PFX` for Authenticode Windows builds. Until then all installers are clearly described as unsigned.
+No signing credentials are configured. Optional signing requires `APPLE_CERTIFICATE` for notarized macOS and `WINDOWS_CERT_PFX` for Authenticode Windows builds. Until then the desktop installers remain unsigned.
