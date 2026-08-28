@@ -26,8 +26,35 @@ test('390px layout keeps the file action keyboard reachable', async ({ browser }
   const trigger = page.getByRole('button', { name: 'Choose a scan' })
   for (let index = 0; index < 12; index++) { if (await trigger.evaluate(element => document.activeElement === element)) break; await page.keyboard.press('Tab') }
   await expect(trigger).toBeFocused()
+  await page.getByRole('link', { name: 'Try it with sample data' }).focus()
+  await page.keyboard.press('Tab')
+  await expect(page.locator('#download-link')).toBeFocused()
+  await expect(page.locator('#file-input')).toHaveAttribute('tabindex', '-1')
   await expect(page.locator('body')).toHaveJSProperty('scrollWidth', 390)
   await context.close()
+})
+
+test('workspace add-page input is skipped by sequential keyboard focus', async ({ page }) => {
+  await page.goto('/demo')
+  await page.getByRole('button', { name: 'Add pages' }).focus()
+  await page.keyboard.press('Tab')
+  await expect(page.getByRole('button', { name: 'Close document' })).toBeFocused()
+  await expect(page.locator('#add-input')).toHaveAttribute('tabindex', '-1')
+})
+
+test('demo startup reuses its measured fixture instead of rasterising it', async ({ page }) => {
+  await page.addInitScript(() => {
+    const original = HTMLCanvasElement.prototype.toDataURL
+    ;(window as typeof window & { __demoRasterWrites: number }).__demoRasterWrites = 0
+    HTMLCanvasElement.prototype.toDataURL = function (...args) {
+      ;(window as typeof window & { __demoRasterWrites: number }).__demoRasterWrites += 1
+      return original.apply(this, args as Parameters<typeof original>)
+    }
+  })
+  await page.goto('/demo')
+  await expect(page.getByRole('heading', { name: 'Field notes · sample page' })).toBeVisible()
+  await expect(page.locator('#page-image')).toHaveAttribute('src', '/sample-scan.svg')
+  expect(await page.evaluate(() => (window as typeof window & { __demoRasterWrites: number }).__demoRasterWrites)).toBe(0)
 })
 
 test('primary file action uses a native button and opens the file chooser', async ({ page }) => {

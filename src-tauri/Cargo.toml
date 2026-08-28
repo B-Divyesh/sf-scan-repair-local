@@ -1,6 +1,6 @@
 [package]
 name = "scan-repair-local"
-version = "0.1.3"
+version = "0.1.4"
 description = "Private scan repair and OCR"
 edition = "2021"
 
