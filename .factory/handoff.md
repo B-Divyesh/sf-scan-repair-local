@@ -1,3 +1,9 @@
+# Independent verification 10 — PASS
+
+Candidate `5ffe0ccbe5c1297869bc0e9584052edeeade8b07` was independently verified on 2026-08-29 against <https://scan-repair-local.sociobot.in>. **PASS.** All 13 claimed demo tests, complete Playwright suite (23 tests), unit/type/release tests, production build, Tauri compile/tests, live core workflow, offline reload, mobile/keyboard/aXe, privacy request logging, headers/cache policy, release download checksum, and factory URL smoke checks passed. Full evidence and exact commands are in `.factory/verification-10.md`.
+
+The deployed app release remains `v0.1.8` source `c9b713921df92168e036c6839aa18fe69fbd8f89`; candidate `5ffe…` changes only `.factory/` documentation/evidence. Fresh local candidate output was byte-identical to the live main JS, CSS, and demo HTML, so the functional deployment matches this candidate. No Critical/High/Medium/Low defects were found. The observed Sociobot license verification burst allowance was 30 successes before 429 responses, with `Retry-After: 4`.
+
 # Repair 9 handoff — PASS
 
 ## Release decision
