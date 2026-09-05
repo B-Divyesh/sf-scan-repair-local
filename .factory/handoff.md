@@ -1,3 +1,7 @@
+# Review 1 — PASS
+
+On 2026-09-05 UTC, review 1 passed implementation candidate `5ffe0ccbe5c1297869bc0e9584052edeeade8b07` at <https://scan-repair-local.sociobot.in>. Zero findings and zero untested public claims were recorded. The functional release source is `c9b713921df92168e036c6839aa18fe69fbd8f89`; documentation HEAD is `ac466d99450009b229bb2c85445f65790df5f131`. Fresh claim, browser, accessibility, Tauri, performance, live workflow, offline OCR/reload, privacy, release-checksum, and AppImage-launch checks passed. See `.factory/review-1.md` for commands, evidence, historic finding disposition, and the FUSE-only container limitation.
+
 # Independent verification 10 — PASS
 
 Candidate `5ffe0ccbe5c1297869bc0e9584052edeeade8b07` was independently verified on 2026-08-29 against <https://scan-repair-local.sociobot.in>. **PASS.** All 13 claimed demo tests, complete Playwright suite (23 tests), unit/type/release tests, production build, Tauri compile/tests, live core workflow, offline reload, mobile/keyboard/aXe, privacy request logging, headers/cache policy, release download checksum, and factory URL smoke checks passed. Full evidence and exact commands are in `.factory/verification-10.md`.
